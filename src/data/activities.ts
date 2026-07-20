@@ -17,7 +17,7 @@ export const activities: Activity[] = [
     content: 'Prva otvorena radionica udruženja okupila je entuzijastične polaznike spremne za rad na realnom hardveru. Kroz praktičnu primenu mikrokontrolera, senzora i jednostavnih aktuatora, učesnici su savladali osnove algoritamskog razmišljanja i napravili prve funkcionalne projekte u svetu automatizacije.',
     date: '2026-07-15',
     category: 'Radionica',
-    image: '/images/activities/robotics-workshop.jpg',
+    image: '/images/robotics-workshop.png',
     slug: 'odrzana-radionica-ugradnih-sistema-i-automatizacije'
   },
   {
@@ -27,7 +27,7 @@ export const activities: Activity[] = [
     content: 'Sa ponosom najavljujemo otvaranje prijava za novi ciklus radionica! Zbog rada u malim mentorskim grupama i rada na namenskoj opremi, broj mesta po grupama je ograničen. Obrazovni programi obuhvataju primenjeno programiranje (C/C#), rad sa mikrokontrolerima (ESP32/Arduino) i osnove elektronike.',
     date: '2026-07-10',
     category: 'Obaveštenje',
-    image: '/images/activities/upis-jesen.jpg',
+    image: '/images/upis.png',
     slug: 'otvorene-prijave-za-prijem-novih-clanova'
   },
   {
@@ -37,7 +37,7 @@ export const activities: Activity[] = [
     content: 'Udruženje STEAM INVENT zvanično je registrovano sa jasnim ciljem: da stvori stabilno okruženje za praktičnu primenu tehnoloških znanja i razvoj inovativnih projekata u Sremskoj Mitrovici. Naš tim stručnjaka spreman je da kroz radionice, predavanja i rad na realnim projektima pruži polaznicima veštine neophodne za moderno inženjersko okruženje.',
     date: '2026-07-01',
     category: 'Inicijativa',
-    image: '/images/activities/osnivanje-udruzenja.jpg',
+    image: '/images/logo.png',
     slug: 'zvanicno-osnovano-udruzenje-steam-invent'
   }
 ];

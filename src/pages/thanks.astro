@@ -1,0 +1,58 @@
+---
+// src/pages/thanks.astro
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout 
+  title="Poruka uspešno poslata | STEAM INVENT" 
+  description="Hvala Vam što ste kontaktirali udruženje građana STEAM INVENT. Vaša poruka je uspešno primljena."
+>
+  
+  <section class="min-h-[70vh] flex items-center justify-center bg-gradient-to-b from-indigo-50/30 to-white py-20">
+    <div class="max-w-md w-full mx-auto px-4 text-center">
+      
+      <!-- Velika animirana/stilizovana ikona uspeha -->
+      <div class="mx-auto w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center border border-emerald-100 mb-8 animate-bounce shadow-sm">
+        <svg class="w-10 h-10 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <!-- Naslov i poruka -->
+      <h1 class="text-3xl font-extrabold text-slate-900 tracking-tight sm:text-4xl">
+        Poruka je uspešno poslata!
+      </h1>
+      
+      <p class="mt-4 text-base text-slate-600 leading-relaxed">
+        Hvala Vam na interesovanju za udruženje <span class="font-semibold text-indigo-600">STEAM INVENT</span>.
+      </p>
+
+      <div class="mt-6 p-4 bg-slate-50 border border-slate-100 rounded-2xl text-left text-xs text-slate-500 space-y-2">
+        <p class="font-semibold text-slate-700 text-sm mb-1">Šta sledi dalje?</p>
+        <p class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>
+          Naš tim će pregledati Vašu poruku u najkraćem roku.
+        </p>
+        <p class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0"></span>
+          Odgovor možete očekivati na email adresu koju ste naveli u formi.
+        </p>
+      </div>
+
+      <!-- Dugme za povratak -->
+      <div class="mt-10">
+        <a 
+          href="/" 
+          class="inline-flex items-center justify-center bg-indigo-600 text-white font-semibold py-3 px-6 rounded-xl hover:bg-indigo-700 transition-colors duration-200 text-sm shadow-md shadow-indigo-200 w-full sm:w-auto"
+        >
+          <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Nazad na početnu stranicu
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</MainLayout>

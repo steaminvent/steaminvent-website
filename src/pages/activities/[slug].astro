@@ -1,0 +1,96 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { activities } from '../../data/activities';
+
+export async function getStaticPaths() {
+  return activities.map((activity) => ({
+    params: { slug: activity.slug.trim().toLowerCase() },
+    props: { activity },
+  }));
+}
+
+const { activity } = Astro.props;
+
+// Formatiranje datuma za prikaz u zaglavlju
+const formattedDate = new Date(activity.date).toLocaleDateString('sr-RS', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric'
+});
+
+// Boje za bedž u zavisnosti od kategorije
+const categoryColors: Record<string, string> = {
+  'Radionica': 'bg-emerald-600 text-white',
+  'Takmičenje': 'bg-amber-600 text-white',
+  'Obaveštenje': 'bg-blue-600 text-white',
+  'Inicijativa': 'bg-purple-600 text-white'
+};
+
+const badgeClass = categoryColors[activity.category] || 'bg-slate-700 text-white';
+---
+
+<MainLayout 
+  title={`${activity.title} | STEAM INVENT`} 
+  description={activity.excerpt}
+>
+  
+  <!-- ZAGLAVLJE VESTI -->
+  <header class="py-12 bg-slate-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#312e81_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    
+    <div class="max-w-3xl mx-auto px-4 relative z-10 text-left">
+      <div class="flex items-center gap-3 mb-4">
+        <span class={`text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wider ${badgeClass}`}>
+          {activity.category}
+        </span>
+        <time class="text-xs font-medium text-slate-400">
+          {formattedDate}
+        </time>
+      </div>
+
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight leading-tight">
+        {activity.title}
+      </h1>
+    </div>
+  </header>
+
+  <!-- SADRŽAJ VESTI -->
+  <article class="py-16 bg-slate-50 min-h-[60vh]">
+    <div class="max-w-3xl mx-auto px-4">
+      
+      <!-- Slika vesti -->
+      <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-video w-full mb-10">
+        <img 
+          src={activity.image} 
+          alt={activity.title} 
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Tekstualni sadržaj -->
+      <div class="bg-white rounded-2xl p-8 sm:p-12 border border-slate-200 shadow-sm text-left">
+        <p class="text-slate-900 text-lg font-semibold leading-relaxed mb-6 border-l-4 border-indigo-600 pl-4">
+          {activity.excerpt}
+        </p>
+        
+        <div class="text-slate-700 text-base leading-relaxed space-y-4 whitespace-pre-line">
+          {activity.content}
+        </div>
+
+        <div class="mt-12 pt-8 border-t border-slate-100 flex justify-start">
+          <a 
+            href="/activities" 
+            class="inline-flex items-center text-sm font-bold text-slate-600 hover:text-indigo-600 gap-2 transition-colors group"
+          >
+            <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            Nazad na sve aktivnosti
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+</MainLayout>

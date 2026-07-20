@@ -1,0 +1,152 @@
+---
+// src/pages/about.astro
+import MainLayout from '../layouts/MainLayout.astro';
+
+// Definišemo članove osnivačkog tima udruženja
+const team = [
+  {
+    name: "Nemanja Janićijević",
+    role: "Suosnivač i Predsednik udruženja",
+    bio: "Profesor računarstva i informatike sa višegodišnjim iskustvom u IT industriji na razvoju softverskih sistema. Posvećen praktičnoj primeni modernih tehnologija, programiranju i razvoju inženjerske logike.",
+    avatar: "/images/team-nemanja.png"
+  },
+  {
+    name: "Nikola Krga",
+    role: "Suosnivač i Koordinator za robotiku",
+    bio: "Inženjer usmeren na hardversku automatizaciju, mehaniku i ugradne (embedded) sisteme. Rukovodi praktičnim radom sa mikrokontrolerskim platformama, senzorima i elektronskim sklopovima.",
+    avatar: "/images/team-nikola.png"
+  },
+  {
+    name: "Teodora Jokić",
+    role: "Suosnivač i Menadžer obrazovnih programa",
+    bio: "Fokusirana na kreiranje nastavnih planova i metodologije rada. Zadužena za pedagoški pristup, organizaciju radionica i spajanje vizuelne umetnosti i dizajna sa tehničkim naukama.",
+    avatar: "/images/team-teodora.png"
+  }
+];
+
+// Metodološki stubovi udruženja
+const pillars = [
+  {
+    title: "Učenje kroz praksu",
+    description: "Znanje se najbolje usvaja kada se odmah primeni. Na svakoj radionici polaznici samostalno prolaze kroz ceo inženjerski proces - od povezivanja prve komponente i pisanja koda do testiranja i otklanjanja grešaka na realnom sistemu."
+  },
+  {
+    title: "Mentorska podrška",
+    description: "Rad u malim grupama omogućava da se posvetimo svakom polazniku pojedinačno, prateći njegov lični tempo napredovanja i usmeravajući njegove specifične interese."
+  },
+  {
+    title: "Realni projekti",
+    description: "Znanje se usvaja kroz rešavanje konkretnih zadataka - od projektovanja pametnih uređaja i ugradnih sistema do izrade funkcionalnih softverskih aplikacija."
+  }
+];
+
+// Zvanični ciljevi udruženja iz statuta
+const goals = [
+  "Popularizacija nauke, tehnologije, inženjerstva, umetnosti i matematike (STEAM).",
+  "Razvoj algoritamskog načina razmišljanja i digitalne pismenosti kod dece, mladih i odraslih.",
+  "Edukacija i praktičan rad sa open-source hardverom i modernim softverskim alatima.",
+  "Mentorska podrška i priprema polaznika za učešće na takmičenjima, hakatonima i stručnim projektima.",
+  "Saradnja sa obrazovnim institucijama i lokalnom privredom u cilju digitalne transformacije i stručnih obuka."
+];
+---
+
+<MainLayout 
+  title="O nama | STEAM INVENT" 
+  description="Upoznajte osnivače i ciljeve udruženja građana STEAM INVENT iz Sremske Mitrovice."
+>
+  
+  <!-- HERO SEKCIJA STRANICE -->
+  <section class="py-16 lg:py-24 bg-gradient-to-b from-indigo-50/50 to-white border-b border-slate-100">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <span class="inline-flex items-center gap-1.5 bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
+        Naša Misija
+      </span>
+      <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight sm:text-5xl">
+        Ko stoji iza <span class="text-indigo-600">STEAM INVENT</span> udruženja?
+      </h1>
+      <p class="mt-6 text-lg leading-relaxed text-slate-600 max-w-3xl mx-auto text-left sm:text-center">
+        Mi smo tim inženjera, profesora i entuzijasta okupljenih sa ciljem da modernizujemo način na koji se savremene tehnologije uče i primenjuju. Kroz praktičan rad, radionice i projekte, pomažemo polaznicima svih uzrasta da savladaju inženjerske veštine i pređu put od korisnika do kreatora tehnologije.
+      </p>
+    </div>
+  </section>
+
+  <!-- SEKCIJA: OSNIVAČKI TIM -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Osnivački tim</h2>
+        <p class="mt-3 text-slate-500">Stručni kadar koji kreira i vodi obrazovne programe udruženja.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {team.map((member) => (
+          <div class="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 text-center shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
+            <div>
+              <!-- Avatar / Slika člana -->
+              <div class="w-40 h-40 bg-indigo-100 rounded-full mx-auto overflow-hidden mb-6 border-4 border-white shadow-md ring-4 ring-indigo-500/10">
+                <img 
+                  src={member.avatar} 
+                  alt={member.name} 
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              
+              <h3 class="text-xl font-bold text-slate-900">{member.name}</h3>
+              <p class="text-sm font-semibold text-indigo-600 mt-1">{member.role}</p>
+              <p class="text-slate-600 text-sm mt-4 leading-relaxed text-left">
+                {member.bio}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- METODOLOŠKI STUBOVI (Kako radimo) -->
+  <section class="py-16 bg-slate-50 border-t border-b border-slate-100">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        {pillars.map((pillar) => (
+          <div class="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm">
+            <h3 class="text-lg font-bold text-slate-900 mb-2 border-l-4 border-indigo-600 pl-3">
+              {pillar.title}
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              {pillar.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- SEKCIJA: CILJEVI I STATUT -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-slate-50 rounded-3xl p-8 lg:p-12 border border-slate-200/80 shadow-sm">
+        <h2 class="text-2xl lg:text-3xl font-bold text-slate-900 mb-6 tracking-tight text-left">
+          Zvanični ciljevi i delatnost udruženja
+        </h2>
+        
+        <p class="text-slate-600 text-base leading-relaxed mb-8 text-left">
+          Kao zvanično registrovano udruženje građana, naš statut i delovanje usmereni su ka ostvarivanju sledećih ciljeva:
+        </p>
+
+        <ul class="space-y-4 text-left">
+          {goals.map((goal) => (
+            <li class="flex items-start gap-3.5 text-slate-700 text-sm sm:text-base leading-relaxed">
+              <span class="flex-shrink-0 mt-1 w-5 h-5 rounded-full bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              </span>
+              <span>{goal}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</MainLayout>

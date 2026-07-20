@@ -1,17 +1,203 @@
 ---
+// src/pages/index.astro
+import MainLayout from '../layouts/MainLayout.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+import { initiatives } from '../data/initiatives';
+import { activities } from '../data/activities';
+import ActivityCard from '../components/ActivityCard.astro';
 
+// SVG putanje za tri ključna tehnološka stuba udruženja (Kategorija A)
+const programmingIcon = "M16 18l6-6-6-6M8 6L2 12l6 6"; 
+const roboticsIcon = "M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"; 
+const iotIcon = "M12 2a10 10 0 1 0 10 10H12V2z"; 
+
+// Sortiramo hronološki (najnovije prvo) i uzimamo top 3 za početnu stranu
+const latestActivities = [...activities]
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .slice(0, 3);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Početna | STEAM INVENT">
+  
+  <!-- HERO SEKCIJA -->
+  <section class="relative py-20 lg:py-28 bg-gradient-to-br from-indigo-50 to-white overflow-hidden border-b border-slate-100">
+    <!-- PROMENJENO: Umesto grid-cols-2 stavljamo grid-cols-12 na desktopu -->
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- LEVA STRANA: TEKST -->
+      <div class="text-left lg:col-span-5">
+        <span class="inline-flex items-center gap-1.5 bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-6">
+          Udruženje za promociju STEAM disciplina
+        </span>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+          Oblikujmo budućnost kroz <span class="text-indigo-600">nauku i tehnologiju</span>
+        </h1>
+        
+        <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+          Kroz zabavan i praktičan rad sa kodom, elektronikom i robotima, pretvaramo radoznalost u stvarne digitalne veštine. Inspirišemo decu i mlade da otkriju šta se krije iza ekrana i postanu hrabri stvaraoci tehnologije koja donosi radost i menja svet na bolje.
+        </p>
+        
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="/courses" class="bg-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-indigo-700 hover:shadow-indigo-200 transition-all duration-200">
+            Istraži naše programe
+          </a>
+          <a href="/about" class="bg-white text-slate-700 border border-slate-300 font-semibold px-6 py-3 rounded-lg hover:bg-slate-50 transition-colors duration-200">
+            Saznaj više o nama
+          </a>
+        </div>
+      </div>
+
+      <!-- DESNA STRANA: SLIKA (Dobija lg:col-span-7 da se vidno i primetno uveliča u prostoru) -->
+      <div class="relative flex justify-center lg:justify-end w-full lg:col-span-7">
+        <div class="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-indigo-500 to-purple-500 opacity-20 blur-lg"></div>
+        <img 
+          src="/images/hero-illustration.png"
+          alt="Deca prave robota - STEAM INVENT radionica"
+          class="relative w-full h-auto rounded-2xl border border-slate-200 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300"
+        />
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KATEGORIJA A: GLAVNI TEHNOLOŠKI STUBOVI (EDUKACIJA) -->
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          Kako razvijamo kreativnost i logiku?
+        </h2>
+        <p class="mt-4 text-lg text-slate-600">
+          Naš program je pažljivo struktuiran tako da polaznike uvede u svet visoke tehnologije kroz igru, saradnju i rešavanje realnih inženjerskih izazova.
+        </p>
+      </div>
+
+      <!-- Kontejner koji omogućava olimpijski raspored (3 + 2 centrirano) -->
+      <div class="flex flex-wrap justify-center gap-8 w-full">
+        
+        <!-- PRVI RED: 3 VELIKE DOMINANTNE KARTICE -->
+        <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] flex">
+          <FeatureCard 
+            title="Nauka"
+            description="Kroz praktične primere razvija se radoznalost i kritičko mišljenje. Polaznici uče da samostalno formulišu pitanja, testiraju svoje ideje u praksi i donose zaključke na osnovu realnih dokaza."
+            iconPath="/images/science.png"
+            badgeText="Naučni metod"
+          />
+        </div>
+
+        <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] flex">
+          <FeatureCard 
+            title="Tehnologija"
+            description="Kombinovana primena hardvera, softvera i pametnih sistema. Polaznici istražuju svet mikroelektronike, interneta stvari (IoT) i arhitekture sistema, učeći kako da povežu digitalni svet sa fizičkim okruženjem."
+            iconPath="/images/technology.png"
+            badgeText="Digitalna pismenost"
+          />
+        </div>
+
+        <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] flex">
+          <FeatureCard 
+            title="Inženjering"
+            description="Spajanje ideje, koda i fizičkog sveta. Kroz praktične projekte savladavaju se principi mehanike, elektronike i robotike, gde se uči kako se apstraktna ideja pretvara u funkcionalan sistem."
+            iconPath="/images/engineering.png"
+            badgeText="Sistemsko razmišljanje"
+          />
+        </div>
+
+        <!-- DRUGI RED: 2 CENTRIRANE KARTICE -->
+        <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] flex">
+          <FeatureCard 
+            title="Umetnost"
+            description="Spajanje estetike i tehnike. Kroz elemente vizuelnog i digitalnog dizajna polaznici razvijaju kreativnost i uče kako da tehničkim projektima daju prepoznatljiv, funkcionalan i privlačan oblik."
+            iconPath="/images/arts.png"
+            badgeText="Kreativnost i dizajn"
+          />
+        </div>
+
+        <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] flex">
+          <FeatureCard 
+            title="Matematika"
+            description="Primenjena logika u službi rešavanja realnih problema. Umesto apstraktne teorije, matematika postaje praktičan alat kojim se definišu algoritmi, optimizuju procesi i donose tačni proračuni."
+            iconPath="/images/math.png"
+            badgeText="Primenjena logika"
+          />
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KATEGORIJA B: SEKCIJA ZA AKTIVNOSTI I INICIJATIVE UDRUŽENJA -->
+  <!-- PODEŠENO: Margine i zaobljene ivice su prilagođene (na mobilnom ide od ivice do ivice, na desktopu se skuplja i zaobljuje) -->
+  <section class="py-24 bg-slate-300/80 text-slate-900 sm:rounded-3xl sm:mx-4 my-8 border-y sm:border border-slate-400/40 shadow-inner">
+    <div class="max-w-6xl mx-auto px-4 sm:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-block text-indigo-800 text-xs font-bold uppercase tracking-wider bg-white px-3 py-1 rounded-full shadow-sm">
+          Širi društveni uticaj
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight mt-3">
+          Inicijative i društvene aktivnosti
+        </h2>
+        <p class="mt-4 text-slate-800 text-lg font-medium">
+          Kao udruženje građana, naš cilj je da aktivno radimo na razvoju lokalne zajednice, podršci mladim talentima i digitalizaciji privrede.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {initiatives.map((item) => (
+          <div class="bg-white border border-slate-200/60 p-8 rounded-2xl flex flex-col justify-between hover:border-indigo-500/50 hover:shadow-lg transition-all duration-300 shadow-md">
+            <div>
+              <!-- Ikona inicijative -->
+              <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-6 shadow-sm">
+                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d={item.iconPath}></path>
+                </svg>
+              </div>
+              
+              <!-- Naslov i opis -->
+              <h3 class="text-xl font-bold text-slate-950 mb-3">
+                {item.title}
+              </h3>
+              <p class="text-slate-700 text-sm leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEKCIJA: AKTUELNOSTI -->
+  <section class="py-20 bg-white border-t border-slate-100">
+    <div class="max-w-5xl mx-auto px-4">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+        <div class="text-left">
+          <h2 class="text-3xl font-black text-slate-900 tracking-tight">Aktuelnosti udruženja</h2>
+          <p class="text-slate-500 mt-2 max-w-xl">Predstavljamo vam sve novosti kod nas, kako izgledaju naše radionice i rezultate koje postižemo zajedno sa našim članovima.</p>
+        </div>
+        
+        <a 
+          href="/activities" 
+          class="inline-flex items-center justify-center font-bold text-sm text-indigo-600 bg-indigo-50 hover:bg-indigo-100/80 px-5 py-2.5 rounded-xl transition-colors whitespace-nowrap"
+        >
+          Pogledaj sve aktivnosti
+        </a>
+      </div>
+
+      <!-- Dinamička mreža kartica -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {latestActivities.map((activity) => (
+          <ActivityCard activity={activity} />
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+</MainLayout>

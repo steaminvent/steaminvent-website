@@ -1,0 +1,147 @@
+---
+// src/pages/courses/[slug].astro
+import MainLayout from '../../layouts/MainLayout.astro';
+import Accordion from '../../components/Accordion.astro'; // Uvozimo čistu komponentu
+import { courses } from '../../data/courses';
+import { courseCurriculums } from '../../data/courseModules';
+
+export async function getStaticPaths() {
+  return courses.map((course) => ({
+    params: { slug: course.slug.trim().toLowerCase() },
+    props: { course },
+  }));
+}
+
+const { course } = Astro.props;
+const { slug } = Astro.params;
+
+const currentSlug = (slug || '').trim().toLowerCase();
+const curriculum = courseCurriculums.find(c => c.courseId.trim().toLowerCase() === currentSlug);
+const currentModules = curriculum && curriculum.modules ? curriculum.modules : [];
+---
+
+<MainLayout 
+  title={`${course.title} | STEAM INVENT`} 
+  description={course.subtitle}
+>
+  
+  <!-- ZAGLAVLJE KURSA (HERO SEKCIJA) -->
+  <section class="relative py-16 lg:py-24 bg-slate-900 text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#312e81_1px,transparent_1px)] [background-size:16px_16px]"></div>
+    
+    <div class="max-w-5xl mx-auto px-4 relative z-10">
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        <span class="bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          {course.category}
+        </span>
+        <span class="bg-slate-800 text-slate-300 text-xs font-medium px-3 py-1 rounded-full border border-slate-700">
+          {course.difficulty}
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight max-w-4xl">
+        {course.title}
+      </h1>
+      
+      <p class="mt-4 text-lg sm:text-xl text-slate-300 max-w-3xl font-normal leading-relaxed">
+        {course.subtitle}
+      </p>
+    </div>
+  </section>
+
+  <!-- GLAVNI SADRŽAJ (DVOKOLONSKI RASPORED) -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+      
+      <!-- LEVA KOLONA: DETALJI I OPIS -->
+      <div class="lg:col-span-2 space-y-8">
+        
+        <!-- Velika slika kursa -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-video w-full">
+          <img 
+            src={course.image} 
+            alt={course.title} 
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Detaljan opis -->
+        <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm space-y-4">
+          <h2 class="text-2xl font-bold text-slate-900">O ovom programu</h2>
+          <p class="text-slate-600 text-base leading-relaxed whitespace-pre-line">
+            {course.description}
+          </p>
+        </div>
+
+        <!-- Tehnologije i alati -->
+        <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+          <h2 class="text-xl font-bold text-slate-900 mb-4">Tehnologije i alati koje savladavamo</h2>
+          <div class="flex flex-wrap gap-2.5">
+            {course.technologies.map((tech) => (
+              <span class="text-sm font-semibold text-indigo-600 bg-indigo-50/70 border border-indigo-100 px-4 py-1.5 rounded-xl">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <!-- AUTOMATIZOVANA KARTICA: Prikazuje se SAMO ako podaci postoje -->
+        {currentModules.length > 0 && (
+          <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm space-y-6">
+            <div>
+              <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Detaljan plan i program</h2>
+              <p class="text-sm text-slate-500 mt-1">Kliknite na modul ispod da biste videli teme i ishode po nedeljama.</p>
+            </div>
+            
+            <Accordion modules={currentModules} />
+          </div>
+        )}
+
+      </div>
+
+      <!-- DESNA KOLONA: INFO PANEL I UPIT -->
+      <div class="space-y-6 lg:sticky lg:top-24">
+        
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4">
+          <h3 class="text-lg font-bold text-slate-900 border-b border-slate-100 pb-3">
+            Osnovne informacije
+          </h3>
+          
+          <div class="space-y-3.5">
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-slate-500">Trajanje programa:</span>
+              <span class="font-semibold text-slate-900">{course.duration}</span>
+            </div>
+            
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-slate-500">Nivo složenosti:</span>
+              <span class="font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs">
+                {course.difficulty.split(' ')[0]}
+              </span>
+            </div>
+
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-slate-500">Lokacija nastave:</span>
+              <span class="font-semibold text-slate-900">Sremska Mitrovica</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-indigo-600 text-white rounded-2xl p-6 shadow-md space-y-4">
+          <h3 class="text-lg font-bold">Zainteresovani ste za ovaj kurs?</h3>
+          <p class="text-sm text-indigo-100 leading-relaxed">
+            Broj mesta u grupama je striktno ograničen kako bismo obezbedili maksimalan kvalitet mentorskog rada i posvećenost svakom polazniku.
+          </p>
+          <a 
+            href="/contact" 
+            class="block text-center bg-white text-indigo-600 hover:bg-slate-50 font-bold py-3 px-4 rounded-xl transition-colors duration-200 text-sm shadow-sm"
+          >
+            Kontaktirajte nas za upis
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</MainLayout>

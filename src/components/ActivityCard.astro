@@ -1,0 +1,67 @@
+---
+import type { Activity } from '../data/activities';
+
+interface Props {
+  activity: Activity;
+}
+
+const { activity } = Astro.props;
+
+// Formatiranje datuma na srpski jezik (npr. 15. jul 2026.)
+const formattedDate = new Date(activity.date).toLocaleDateString('sr-RS', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric'
+});
+
+// Boje za bedževe u zavisnosti od kategorije
+const categoryColors: Record<string, string> = {
+  'Radionica': 'bg-emerald-50 text-emerald-700 border-emerald-100',
+  'Takmičenje': 'bg-amber-50 text-amber-700 border-amber-100',
+  'Obaveštenje': 'bg-blue-50 text-blue-700 border-blue-100',
+  'Inicijativa': 'bg-purple-50 text-purple-700 border-purple-100'
+};
+
+const badgeClass = categoryColors[activity.category] || 'bg-slate-50 text-slate-700 border-slate-100';
+---
+
+<article class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col h-full group hover:shadow-md transition-all duration-200">
+  <div class="aspect-video w-full overflow-hidden bg-slate-100 relative">
+    <img 
+      src={activity.image} 
+      alt={activity.title} 
+      class="w-full h-full object-cover group-hover:scale-102 transition-transform duration-300"
+    />
+    <span class={`absolute top-4 left-4 text-xs font-bold px-2.5 py-1 rounded-md border shadow-sm ${badgeClass}`}>
+      {activity.category}
+    </span>
+  </div>
+  
+  <div class="p-6 flex flex-col flex-grow text-left">
+    <time class="text-xs font-medium text-slate-400 mb-2 block">
+      {formattedDate}
+    </time>
+    
+    <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-indigo-600 transition-colors line-clamp-2">
+      <a href={`/activities/${activity.slug}`}>
+        {activity.title}
+      </a>
+    </h3>
+    
+    <p class="mt-3 text-slate-600 text-sm leading-relaxed line-clamp-3 flex-grow">
+      {activity.excerpt}
+    </p>
+    
+    <div class="mt-5 pt-4 border-t border-slate-100">
+      <a 
+        href={`/activities/${activity.slug}`} 
+        class="inline-flex items-center text-xs font-bold text-indigo-600 hover:text-indigo-700 gap-1 group/link"
+      >
+        Pročitaj više
+        <svg class="w-4 h-4 transform group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</article>

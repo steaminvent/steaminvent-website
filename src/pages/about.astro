@@ -70,7 +70,7 @@ const goals = [
       <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight sm:text-5xl">
         Ko stoji iza <span class="text-indigo-600">STEAM INVENT</span> udruženja?
       </h1>
-      <p class="mt-6 text-lg leading-relaxed text-slate-600 max-w-3xl mx-auto text-justify sm:text-center">
+      <p class="mt-6 text-lg leading-relaxed text-slate-600 max-w-3xl mx-auto text-center sm:text-center">
         Mi smo tim inženjera, profesora i entuzijasta okupljenih sa ciljem da modernizujemo način na koji se savremene tehnologije uče i primenjuju. Kroz praktičan rad, radionice i projekte, pomažemo polaznicima svih uzrasta da savladaju inženjerske veštine i pređu put od korisnika do kreatora tehnologije.
       </p>
     </div>
@@ -84,9 +84,9 @@ const goals = [
         <p class="mt-3 text-slate-500">Stručni kadar koji kreira i vodi obrazovne programe udruženja.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {team.map((member) => (
-          <div class="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 text-center shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow duration-300">
+          <div class="bg-slate-50 border border-slate-200/60 rounded-2xl p-6 text-center shadow-sm flex flex-col h-full hover:shadow-md transition-shadow duration-300">
             <div>
               <!-- Avatar / Slika člana -->
               <div class="w-40 h-40 bg-indigo-100 rounded-full mx-auto overflow-hidden mb-6 border-4 border-white shadow-md ring-4 ring-indigo-500/10">
@@ -99,10 +99,13 @@ const goals = [
               
               <h3 class="text-xl font-bold text-slate-900">{member.name}</h3>
               <p class="text-sm font-semibold text-indigo-600 mt-1">{member.role}</p>
-              <p class="text-slate-600 text-sm mt-4 leading-relaxed text-justify">
+            </div>
+            
+            {member.bio && (
+              <p class="text-slate-600 text-sm mt-4 leading-relaxed text-left">
                 {member.bio}
               </p>
-            </div>
+            )}
           </div>
         ))}
       </div>
@@ -114,13 +117,15 @@ const goals = [
     <div class="max-w-5xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
         {pillars.map((pillar) => (
-          <div class="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm">
-            <h3 class="text-lg font-bold text-slate-900 mb-2 border-l-4 border-indigo-600 pl-3">
-              {pillar.title}
-            </h3>
-            <p class="text-slate-600 text-sm leading-relaxed text-justify">
-              {pillar.description}
-            </p>
+          <div class="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2 border-l-4 border-indigo-600 pl-3">
+                {pillar.title}
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed text-left mt-3">
+                {pillar.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>
@@ -135,7 +140,7 @@ const goals = [
           Zvanični ciljevi i delatnost udruženja
         </h2>
         
-        <p class="text-slate-600 text-base leading-relaxed mb-8 text-justify">
+        <p class="text-slate-600 text-base leading-relaxed mb-8 text-left">
           Kao zvanično registrovano udruženje građana, naš statut i delovanje usmereni su ka ostvarivanju sledećih ciljeva:
         </p>
 

@@ -15,32 +15,32 @@ export interface Course {
 
 export const courses: Course[] = [
   {
-    slug: "lego-robotika-i-programiranje",
-    title: "Lego Robotika & Programiranje",
-    subtitle: "Uvod u mehaniku i logiku kroz sklapanje i igru",
-    description: "Savršen uvod za ulazak u svet inženjerstva. Kroz sklapanje Lego kompleta, korišćenje motora i senzora, učimo kako fizički objekti oživljavaju uz pomoć jednostavnih vizuelnih komandi.",
-    difficulty: "Početni nivo",
-    duration: "2 meseca (16 časova)",
-    category: "Vizuelno programiranje",
-    technologies: ["Lego Education", "Senzori", "Mehanika"],
-    image: "/images/course-lego.png",
-    featured: true
-  },
-  {
     slug: "razvoj-logike-kroz-igru-scratch",
     title: "Razvoj Logike kroz Scratch",
     subtitle: "Kreiranje igara i animacija kroz algoritamski kod",
-    description: "Učimo koncepte programiranja bez kucanja sintakse. Slažući šarene blokove koda, polaznici savladavaju petlje, uslove i promenljive kroz dizajn sopstvenih video igara.",
+    description: "Učimo koncepte programiranja bez kucanja koda. Slažući šarene blokove koda, polaznici savladavaju osnovne koncepte programiranja kao što su promenljive, uslovi i petlje. Razvijaju logičko razmišljanje dizajnirajući sopstvene priče, animacije i video igre.",
     difficulty: "Početni nivo",
-    duration: "3 meseca (24 časa)",
+    duration: "3 meseca (24 časova)",
     category: "Vizuelno programiranje",
     technologies: ["Scratch", "Blockly", "Algoritmi"],
     image: "/images/course-scratch.png",
     featured: true
   },
   {
+    slug: "lego-robotika-i-programiranje",
+    title: "Lego Robotika & Programiranje",
+    subtitle: "Uvod u mehaniku i logiku kroz sklapanje i igru",
+    description: "Savršen uvod za ulazak u svet inženjerstva. Kroz sklapanje Lego kompleta, korišćenje motora i senzora, učimo kako fizički objekti oživljavaju uz pomoć jednostavnih vizuelnih komandi.",
+    difficulty: "Početni nivo",
+    duration: "3 meseca (24 časova)",
+    category: "Vizuelno programiranje",
+    technologies: ["Lego Education", "Senzori", "Mehanika"],
+    image: "/images/course-lego.png",
+    featured: true
+  },
+  {
     slug: "prakticna-elektronika-i-3d-stampa",
-    title: "Praktična Elektronika & 3D Štampa",
+    title: "Elektronika & 3D Štampa",
     subtitle: "Od električnih šema do opipljivih fizičkih uređaja",
     description: "Upoznajte bazične elektronske komponente, naučite bezbedno lemljenje i korišćenje multimetra. Paralelno savladavamo osnove 3D modelovanja i rad sa 3D štampačima.",
     difficulty: "Srednji nivo",
@@ -52,9 +52,9 @@ export const courses: Course[] = [
   },
   {
     slug: "arduino-robotika-i-iot",
-    title: "Arduino Robotika & Pametni Sistemi",
+    title: "Arduino Robotika & Pametni IoT Sistemi",
     subtitle: "Programiranje mikrokontrolera i kreiranje pametnih uređaja",
-    description: "Ulazak u svet Interneta Stvari (IoT). Naučite kako da programirate Arduino i ESP32, povežete senzore koji čitaju podatke iz okruženja i bežično šalju informacije na internet.",
+    description: "Ulazak u svet Interneta Stvari (IoT). Naučite kako da programirate Arduino i ESP32, povežete senzore koji čitaju podatke iz okruženja, upravljate aktuatorima i bežično šaljete informacije putem interneta.",
     difficulty: "Srednji nivo",
     duration: "4 meseca (32 časa)",
     category: "Elektronika & IoT",
@@ -78,7 +78,7 @@ export const courses: Course[] = [
     slug: "objektno-orijentisano-programiranje-csharp",
     title: "Razvoj Aplikacija: C# & .NET",
     subtitle: "Savladajte objektno-orijentisano programiranje",
-    description: "Kurs je fokusiran na razvoj stabilnih konzolnih i desktop aplikacija. Učimo strukturu C# jezika, rad sa klasama, objektima, datotekama i arhitekturom savremenog softvera.",
+    description: "Program je fokusiran na razvoj stabilnih konzolnih i desktop aplikacija. Učimo strukturu C# jezika, rad sa klasama, objektima, interfejsima i arhitekturom savremenog softvera.",
     difficulty: "Napredni nivo",
     duration: "4 meseca (32 časa)",
     category: "Softversko inženjerstvo",

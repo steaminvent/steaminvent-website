@@ -37,7 +37,7 @@ export const activities: Activity[] = [
     content: 'Udruženje STEAM INVENT zvanično je registrovano sa jasnim ciljem: da stvori stabilno okruženje za praktičnu primenu tehnoloških znanja i razvoj inovativnih projekata u Sremskoj Mitrovici. Naš tim stručnjaka spreman je da kroz radionice, predavanja i rad na realnim projektima pruži polaznicima veštine neophodne za moderno inženjersko okruženje.',
     date: '2026-07-01',
     category: 'Inicijativa',
-    image: '/images/logo.png',
+    image: '/images/logo-kompanije.png',
     slug: 'zvanicno-osnovano-udruzenje-steam-invent'
   }
 ];

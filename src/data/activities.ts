@@ -10,34 +10,25 @@ export interface Activity {
 }
 
 export const activities: Activity[] = [
-  {
-    id: 'radionica-robotika-1',
-    title: 'Održana radionica ugradnih sistema i automatizacije',
-    excerpt: 'Uspešno je realizovana naša prva otvorena radionica gde su polaznici imali priliku da praktično sklapaju i programiraju pametne uređaje.',
-    content: 'Prva otvorena radionica udruženja okupila je entuzijastične polaznike spremne za rad na realnom hardveru. Kroz praktičnu primenu mikrokontrolera, senzora i jednostavnih aktuatora, učesnici su savladali osnove algoritamskog razmišljanja i napravili prve funkcionalne projekte u svetu automatizacije.',
-    date: '2026-07-15',
-    category: 'Radionica',
-    image: '/images/robotics-workshop.png',
-    slug: 'odrzana-radionica-ugradnih-sistema-i-automatizacije'
-  },
+
   {
     id: 'prijem-novih-clanova-jesen',
     title: 'Otvorene prijave za prijem novih članova i jesenji ciklus radionica',
-    excerpt: 'STEAM INVENT zvanično poziva sve zainteresovane da se priključe udruženju i obezbede mesto u novom ciklusu praktičnih radionica.',
-    content: 'Sa ponosom najavljujemo otvaranje prijava za novi ciklus radionica! Zbog rada u malim mentorskim grupama i rada na namenskoj opremi, broj mesta po grupama je ograničen. Obrazovni programi obuhvataju primenjeno programiranje (C/C#), rad sa mikrokontrolerima (ESP32/Arduino) i osnove elektronike.',
-    date: '2026-07-10',
+    excerpt: 'STEAM INVENT zvanično poziva sve zainteresovane da se priključe udruženju i obezbede mesto u novom ciklusu praktičnih radionica koje startuju u oktobru mesecu. ',
+    content: 'Sa ponosom najavljujemo otvaranje prijava za novi ciklus radionica! Zbog rada u malim mentorskim grupama i rada na namenskoj opremi, broj mesta po grupama je ograničen. Sve naše radionice i detalje programa možete pronaći na stranici Programi našeg sajta kao i na zvaničnim stranicma društvenih mreža. Ili nas kontaktirati putem telefona i email-a. Ili jednostavno prošetati do našeg sedišta na adresi Kralja Petra I 5/12 u Sremskoj Mitrovici.',
+    date: '2026-09-04',
     category: 'Obaveštenje',
-    image: '/images/upis.png',
+    image: '/images/robotics-workshop.png',
     slug: 'otvorene-prijave-za-prijem-novih-clanova'
   },
   {
     id: 'steam-invent-osnivanje',
     title: 'Zvanično osnovano udruženje građana STEAM INVENT',
     excerpt: 'Pokrenuta je nova inženjerska inicijativa sa ciljem popularizacije STEAM disciplina, robotike i primenjenog programiranja.',
-    content: 'Udruženje STEAM INVENT zvanično je registrovano sa jasnim ciljem: da stvori stabilno okruženje za praktičnu primenu tehnoloških znanja i razvoj inovativnih projekata u Sremskoj Mitrovici. Naš tim stručnjaka spreman je da kroz radionice, predavanja i rad na realnim projektima pruži polaznicima veštine neophodne za moderno inženjersko okruženje.',
-    date: '2026-07-01',
+    content: 'Udruženje za promociju STEAM disciplina i inovacija "STEAM INVENT" zvanično je registrovano sa jasnim ciljem: da stvori stabilno okruženje za praktičnu primenu tehnoloških znanja i razvoj inovativnih projekata u Sremskoj Mitrovici. Naš tim stručnjaka spreman je da kroz radionice, predavanja i rad na realnim projektima pruži polaznicima veštine neophodne za moderno inženjersko okruženje.',
+    date: '2026-08-19',
     category: 'Inicijativa',
-    image: '/images/steaminvent-logo.png',
+    image: '/images/steam-drvo.svg',
     slug: 'zvanicno-osnovano-udruzenje-steam-invent'
   }
 ];

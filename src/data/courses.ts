@@ -16,7 +16,7 @@ export interface Course {
 export const courses: Course[] = [
   {
     slug: "razvoj-logike-kroz-igru-scratch",
-    title: "Razvoj Logike kroz Scratch",
+    title: "Razvoj Logike kroz Scratch za Najmlađe",
     subtitle: "Kreiranje igara i animacija kroz algoritamski kod",
     description: "Učimo koncepte programiranja bez kucanja koda. Slažući šarene blokove koda, polaznici savladavaju osnovne koncepte programiranja kao što su promenljive, uslovi i petlje. Razvijaju logičko razmišljanje dizajnirajući sopstvene priče, animacije i video igre.",
     difficulty: "Početni nivo",

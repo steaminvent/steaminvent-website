@@ -14,6 +14,29 @@ export interface CourseCurriculum {
 
 export const courseCurriculums: CourseCurriculum[] = [
   {
+    courseId: "razvoj-logike-kroz-igru-scratch",
+    modules: [
+      {
+        week: "Nedelje 1-4",
+        title: "Osnove programiranja, animacije i digitalno crtanje",
+        description: "U prvom mesecu, naši najmlađi članovi se upoznaju sa osnovama algoritamskog razmišljanja i radnim okruženjem. Učimo kako računar razume komande i kako da prenesemo svoje ideje na ekran. Kreiramo prve animacije korišćenjem koordinata, grananja i petlji kao osnovnih koncepata programiranja.",
+        skills: ["Algoritamski način razmišljanja", "Koordinate", "If-Then", "Loop", "Animacije", "Digitalno crtanje"]
+      },
+      {
+        week: "Nedelje 5-8",
+        title: "Logika video-igara i napredniji interaktivni projekti",
+        description: "Drugi mesec donosi pravu akciju! Prelazimo na izradu potpuno funkcionalnih video-igara. Pravimo igru Bekstvo iz lavirinta, gde učimo kako računar prepoznaje zidove (preko detekcije boja) i kako sprečavamo prolazak kroz prepreke. Učimo kako različiti delovi programa komuniciraju međusobno nevidljivim porukama. Kreiramo igricu i lik Goblina koji hvata padajuće slatke krofne i izbegava otrovne. Učimo kako jedan originalni lik može stvoriti stotine svojih kopija na nasumičnim pozicijama, optimizujući rad računara. I to sve kroz igru!",
+        skills: ["Promenljive", "Sistem poruka", "Kloniranje objekata", "Praćenje rezultata", "Dizajn", "Video igre"]
+      },
+      {
+        week: "Nedelje 9-12",
+        title: "Mehanika, proširena stvarnost (AR) i arhitektura igara",
+        description: "U završnom mesecu, polaznici pomeraju granice i prave spektakularne, složene projekte, pripremajući se za ozbiljnije programske jezike. Kreiramo svemirsku igricu gde programiramo projektile i neprijatelje koji međusobno komuniciraju, sudaraju se i brišu iz memorije, uz uvođenje Cooldown mehanizma. Poseban deo kursa posvećujemo korišćenjem web kamere i Video Sensing tehnologije. Pravimo našu verziju Fruit Ninja igre, gde deca pokretima sopstvenog tela u stvarnom svetu seckaju voće na ekranu. I za kraj kreiramo jedan tajni zabavan projekat.",
+        skills: ["Augmented Reality / AR", "Video Sensing", "Gravity mechanics"]
+      }
+    ]
+  },
+  {
     courseId: "uvod-u-kodiranje-python-i-web",
     modules: [
       {

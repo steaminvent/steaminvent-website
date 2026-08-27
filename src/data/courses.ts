@@ -15,7 +15,7 @@ export interface Course {
 
 export const courses: Course[] = [
   {
-    slug: "razvoj-logike-kroz-igru-scratch",
+    slug: "razvoj-logike-kroz-scratch",
     title: "Razvoj Logike kroz Scratch za Najmlađe",
     subtitle: "Kreiranje igara i animacija kroz algoritamski kod",
     description: "Učimo koncepte programiranja bez kucanja koda. Slažući šarene blokove koda, polaznici savladavaju osnovne koncepte programiranja kao što su promenljive, uslovi i petlje. Razvijaju logičko razmišljanje dizajnirajući sopstvene priče, animacije i video igre.",
@@ -25,6 +25,49 @@ export const courses: Course[] = [
     technologies: ["Scratch", "Blockly", "Algoritmi"],
     image: "/images/course-scratch.png",
     featured: true
+  },
+  {
+    slug: "python-osnovni-nivo",
+    title: "Python: Osnovni nivo",
+    subtitle: "Od prvih linija koda do samostalnih konzolnih aplikacija",
+    description: "Python je jedan od najmoćnijih i najpopularnijih programskih jezika, a ovaj kurs je namenjen polaznicima koji žele da naprave prvi ozbiljan korak u svetu programiranja. "
+                + "Kroz pažljivo osmišljene lekcije i veliki broj praktičnih zadataka, učenici postepeno uče kako da razmišljaju kao programeri, rešavaju probleme i svoje ideje pretvore u funkcionalan program. Ovaj kurs predstavlja čvrstu osnovu za nastavak učenja programiranja i prirodan uvod u naš Python srednji nivo, na kojem se detaljnije obrađuju objektno-orijentisano programiranje i napredniji koncepti.",
+    difficulty: "Početni nivo",
+    duration: "4 meseca (32 časa)",
+    category: "Softversko inženjerstvo",
+    technologies: ["Python", "VS Code", "Algoritamsko razmišljanje", "Strukture podataka", "Programiranje"],
+    image: "/images/python-osnovni-kurs.png",
+    featured: false
+  },
+  {
+    slug: "python-srednji-nivo",
+    title: "Python: Srednji nivo",
+    subtitle: "Od objektno-orijentisanog programiranja do izrade složenijih aplikacija", 
+    description: "Nakon savladavanja Python osnova, polaznici na ovom kursu prelaze na viši nivo programiranja i uče kako da svoje programe organizuju kao složene, pregledne i funkcionalne sisteme. "
+              + "Glavni fokus kursa je objektno-orijentisano programiranje kroz koje učenici upoznaju klase, objekte, atribute, metode, enkapsulaciju, nasleđivanje, polimorfizam i kompoziciju. "
+              + "Kroz praktične projekte uče kako više klasa može da sarađuje u jednoj aplikaciji, kako da program učine otpornijim na greške, sačuvaju podatke i organizuju kod kroz više modula. "
+              + "Kurs predstavlja prirodan nastavak našeg Python osnovnog nivoa i priprema polaznike za naprednije programiranje, razvoj kompleksnijih aplikacija i rad na samostalnim projektima.",
+    difficulty: "Srednji nivo",
+    duration: "4 meseca (32 časa)",
+    category: "Softversko inženjerstvo",
+    technologies: ["Python", "VS Code", "OOP", "Rad sa fajlovima", "JSON"],
+    image: "/images/python-srednji-nivo.png",
+    featured: false
+  },
+  {
+    slug: "sql-osnovni-nivo",
+    title: "SQL: Osnovni nivo",
+    subtitle: "Od prvih tabela do samostalnog rada sa relacionim bazama podataka",
+    description: "SQL je standardni jezik za rad sa relacionim bazama podataka i predstavlja jednu od najvažnijih veština u savremenom programiranju i obradi podataka. "
+                + "Ovaj kurs je namenjen polaznicima koji žele da nauče kako se podaci organizuju u bazama, kako se kreiraju i povezuju tabele i kako se pomoću SQL upita podaci pretražuju, filtriraju, obrađuju i analiziraju. "
+                + "Kroz veliki broj praktičnih primera i zadataka, polaznici rade u Microsoft SQL Server okruženju i postepeno prelaze od osnovnih SQL naredbi do složenijih upita koji povezuju više tabela. "
+                + "Kurs predstavlja čvrstu osnovu za nastavak učenja SQL-a i prirodan uvod u naš SQL srednji nivo.",
+    difficulty: "Početni nivo",
+    duration: "2 meseca (16 časova)",
+    category: "Softversko inženjerstvo",
+    technologies: ["SQL", "Relacione baze podataka", "SQL upiti"],
+    image: "/images/sql-osnovni-kurs.png",
+    featured: false
   },
   {
     slug: "lego-robotika-i-programiranje",

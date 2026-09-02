@@ -27,8 +27,21 @@ export const courses: Course[] = [
     featured: true
   },
   {
-    slug: "python-osnovni-nivo",
-    title: "Python: Osnovni nivo",
+    slug: "steam-igracke-i-robotika",
+    title: "STEAM Igračke & Robotika za Najmlađe",
+    subtitle: "Razvoj tehničkih veština kroz STEM igračke i robote za najmlađe",
+    description: "Program je osmišljen kao praktičan uvod u svet inženjerstva, elektronike i robotike za decu. U prvom delu kursa fokus je na mehanici, električnim kolima i solarnoj energiji, gde deca od drvenih i plastičnih delova samostalno sklapaju funkcionalne igračke koje zadržavaju. "
+    + "U drugom delu kursa prelaze na naprednije edukativne robote sa motorima i senzorima, gde uče osnove logike i blokovskog programiranja kako bi oživeli svoje konstrukcije.",
+    difficulty: "Početni nivo",
+    duration: "3 meseca (20 časova)",
+    category: "Vizuelno programiranje",
+    technologies: ["Robotika", "Scratch", "Blockly"],
+    image: "/images/course-lego.png",
+    featured: true
+  },
+  {
+    slug: "python-pocetni-nivo",
+    title: "Python: Početni nivo",
     subtitle: "Od prvih linija koda do samostalnih konzolnih aplikacija",
     description: "Python je jedan od najmoćnijih i najpopularnijih programskih jezika, a ovaj kurs je namenjen polaznicima koji žele da naprave prvi ozbiljan korak u svetu programiranja. "
                 + "Kroz pažljivo osmišljene lekcije i veliki broj praktičnih zadataka, učenici postepeno uče kako da razmišljaju kao programeri, rešavaju probleme i svoje ideje pretvore u funkcionalan program. Ovaj kurs predstavlja čvrstu osnovu za nastavak učenja programiranja i prirodan uvod u naš Python srednji nivo, na kojem se detaljnije obrađuju objektno-orijentisano programiranje i napredniji koncepti.",
@@ -54,9 +67,42 @@ export const courses: Course[] = [
     image: "/images/python-srednji-nivo.png",
     featured: false
   },
+  { 
+    slug: "csharp-pocetni-nivo", 
+    title: "C#: Početni nivo", 
+    subtitle: "Od prvih linija koda do samostalnih konzolnih aplikacija", 
+    description: "C# je jedan od najvažnijih savremenih programskih jezika i predstavlja odličnu osnovu za razvoj softvera, aplikacija i naprednih programerskih sistema. " 
+              + "Ovaj kurs je namenjen polaznicima koji žele da naprave prvi ozbiljan korak u programiranju i kroz praktičan rad upoznaju osnove C# jezika. " 
+              + "Kroz pažljivo osmišljene lekcije i veliki broj praktičnih zadataka, polaznici uče kako funkcionišu promenljive, tipovi podataka, operatori, grananje, petlje, nizovi i metode, ali i kako da analiziraju problem, osmisle algoritam i svoje rešenje pretvore u funkcionalan program. " 
+              + "Poseban akcenat stavljen je na razvoj algoritamskog razmišljanja, rešavanje problema, debugging i samostalno pisanje preglednog i funkcionalnog koda u Visual Studio okruženju. " 
+              + "Stečeno znanje polaznici objedinjuju kroz završni projekat, čime stiču čvrstu osnovu za nastavak učenja C# programiranja i prirodan prelazak na naš C# srednji nivo, na kojem se detaljnije obrađuju objektno-orijentisano programiranje i napredniji koncepti jezika.", 
+    difficulty: "Početni nivo", 
+    duration: "4 meseca (32 časa)", 
+    category: "Softversko inženjerstvo", 
+    technologies: [ "C #", "Visual Studio", "Algoritamsko razmišljanje", "Strukture podataka", "Programiranje" ], 
+    image: "/images/course-csharp-pocetni.png", 
+    featured: false 
+  },
   {
-    slug: "sql-osnovni-nivo",
-    title: "SQL: Osnovni nivo",
+    slug: "csharp-srednji-nivo",
+    title: "C#: Srednji nivo",
+    subtitle: "Od osnovnog C# programiranja do ozbiljnog objektno-orijentisanog razvoja",
+    description: "Ovaj kurs predstavlja prirodan nastavak našeg C# kursa za početni nivo i namenjen je polaznicima koji žele da svoje osnovno znanje C# programiranja podignu na viši nivo. "
+      + "Kroz sistematsko upoznavanje sa objektno-orijentisanim programiranjem, polaznici uče kako da programski kod organizuju kroz klase i objekte i kako da grade pregledne, modularne i ponovo upotrebljive softverske komponente. "
+      + "Kurs detaljno obrađuje svojstva, konstruktore, modifikatore pristupa, enkapsulaciju, apstrakciju, nasleđivanje, polimorfizam i interfejse, uz posebno razumevanje razlike između overloading i overriding mehanizama. "
+      + "Polaznici se zatim upoznaju sa exception handling mehanizmima, generičkim tipovima, kolekcijama, delegatima, lambda izrazima i LINQ-om, čime prelaze sa rada na osnovnim konzolnim programima na razvoj struktuisanijih i realnijih C# rešenja. "
+      + "Kroz veliki broj praktičnih zadataka u Visual Studio okruženju polaznici uče da povezuju više koncepata, analiziraju postojeći kod, pronađu i otklone greške i donesu odgovarajuće odluke prilikom projektovanja programa. "
+      + "Stečeno znanje objedinjuju kroz završni projekat u kojem samostalno razvijaju funkcionalnu C# aplikaciju i primenjuju ključne principe objektno-orijentisanog programiranja. Kurs predstavlja čvrstu osnovu za nastavak učenja i prirodan prelazak na razvoj desktop aplikacija kroz WPF i MVVM arhitekturu.",
+    difficulty: "Srednji nivo",
+    duration: "4 meseca (32 časa)",
+    category: "Softversko inženjerstvo",
+    technologies: ["C #", "Visual Studio", "OOP", "Generics", "Collections", "LINQ", "Delegates", "Lambda izrazi", "Programiranje"],
+    image: "/images/course-csharp-srednji.png",
+    featured: false
+  },
+  {
+    slug: "sql-pocetni-nivo",
+    title: "SQL: Početni nivo",
     subtitle: "Od prvih tabela do samostalnog rada sa relacionim bazama podataka",
     description: "SQL je standardni jezik za rad sa relacionim bazama podataka i predstavlja jednu od najvažnijih veština u savremenom programiranju i obradi podataka. "
                 + "Ovaj kurs je namenjen polaznicima koji žele da nauče kako se podaci organizuju u bazama, kako se kreiraju i povezuju tabele i kako se pomoću SQL upita podaci pretražuju, filtriraju, obrađuju i analiziraju. "
@@ -68,18 +114,6 @@ export const courses: Course[] = [
     technologies: ["SQL", "Relacione baze podataka", "SQL upiti"],
     image: "/images/sql-osnovni-kurs.png",
     featured: false
-  },
-  {
-    slug: "lego-robotika-i-programiranje",
-    title: "Lego Robotika & Programiranje",
-    subtitle: "Uvod u mehaniku i logiku kroz sklapanje i igru",
-    description: "Savršen uvod za ulazak u svet inženjerstva. Kroz sklapanje Lego kompleta, korišćenje motora i senzora, učimo kako fizički objekti oživljavaju uz pomoć jednostavnih vizuelnih komandi.",
-    difficulty: "Početni nivo",
-    duration: "3 meseca (24 časa)",
-    category: "Vizuelno programiranje",
-    technologies: ["Lego Education", "Senzori", "Mehanika"],
-    image: "/images/course-lego.png",
-    featured: true
   },
   {
     slug: "prakticna-elektronika-i-3d-stampa",
@@ -115,30 +149,6 @@ export const courses: Course[] = [
     category: "Softversko inženjerstvo",
     technologies: ["Python", "HTML5", "CSS3", "JavaScript"],
     image: "/images/course-python.png",
-    featured: false
-  },
-  {
-    slug: "objektno-orijentisano-programiranje-csharp",
-    title: "Razvoj Aplikacija: C# & .NET",
-    subtitle: "Savladajte objektno-orijentisano programiranje",
-    description: "Program je fokusiran na razvoj stabilnih konzolnih i desktop aplikacija. Učimo strukturu C# jezika, rad sa klasama, objektima, interfejsima i arhitekturom savremenog softvera.",
-    difficulty: "Napredni nivo",
-    duration: "4 meseca (32 časa)",
-    category: "Softversko inženjerstvo",
-    technologies: ["C#", ".NET", "OOP", "Desktop Apps"],
-    image: "/images/course-csharp.png",
-    featured: true
-  },
-  {
-    slug: "sql-baze-podataka-i-modelovanje",
-    title: "SQL Baze Podataka & Modelovanje",
-    subtitle: "Projektovanje, kreiranje i upravljanje podacima",
-    description: "Naučite kako funkcioniše srce svakog softverskog sistema – baza podataka. Savladajte modelovanje podataka, postavljanje relacija i pisanje kompleksnih SQL upita za manipulaciju podacima.",
-    difficulty: "Napredni nivo",
-    duration: "3 meseca (24 časa)",
-    category: "Softversko inženjerstvo",
-    technologies: ["SQL", "Relacione Baze", "Modelovanje podataka", "Upiti"],
-    image: "/images/course-sql.png",
     featured: false
   },
   {

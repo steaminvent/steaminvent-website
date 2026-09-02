@@ -37,7 +37,30 @@ export const courseCurriculums: CourseCurriculum[] = [
     ]
   },
   {
-    courseId: "python-osnovni-nivo",
+    courseId: "steam-igracke-i-robotika",
+    modules: [
+      {
+        week: "Nedelje 1-4",
+        title: "Osnove mehanike i elektronike",
+        description: "U prvom mesecu polaznici ulaze u svet mehanike i elektronike kroz praktično sklapanje STEM igračaka. Uče kako funkcionišu zupčanici, kako se zatvara električno kolo i kako solarni paneli pretvaraju svetlost u pokret. Svaku igračku koju naprave u ovom delu kursa deca zadržavaju i nose kući kao poklon.",
+        skills: [" DC motori", "Solarni paneli", "Zupčanici", "Strujna kola", "STEAM igračke"]
+      },
+      {
+        week: "Nedelje 5-8",
+        title: "Uvod u robotiku, senzore i blokovsko programiranje",
+        description: "U drugom delu kursa deca prelaze na edukativne kompletne robote sa pametnim hub-om, motorima i senzorima. Uče kako da povežu fizičkog robota sa računarom/tabletom i kako da slažući šarene blokove koda upravljaju njegovim kretanjem i reakcijama na okruženje.",
+        skills: ["Smart Hub", "Elektromotori i senzori", "Blockly / Scratch"]
+      },
+      {
+        week: "Nedelje 9-10",
+        title: "Složene robotske konstrukcije i završni projekat",
+        description: "Polaznici objedinjuju sva stečena znanja iz mehanike, elektronike i programiranja. Kroz timski rad sklapaju složenije robote (sa sistemima poluga, sajli ili više pokretnih delova) i programiraju ih za rešavanje konkretnih praktičnih zadataka.",
+        skills: ["Multisenzorska logika", "Ispitivanje i poligon zadaci", "Timski rad"]
+      }
+    ]
+  },
+  {
+    courseId: "python-pocetni-nivo",
 
     modules: [
       {
@@ -96,8 +119,68 @@ export const courseCurriculums: CourseCurriculum[] = [
       }
     ]
   },
+  { 
+    courseId: "csharp-pocetni-nivo", 
+    
+    modules: [ 
+      { 
+        week: "Nedelje 1-4", 
+        title: "C# osnove, tipovi podataka i rad sa podacima", 
+        description: "U prvom mesecu polaznici se upoznaju sa C# programskim jezikom i radnim okruženjem Visual Studio. Uče osnovnu strukturu programa, pravila pisanja koda, identifikatore i službene reči, a zatim upoznaju najvažnije tipove podataka, uključujući celobrojne, realne, logičke, znakovne i string vrednosti. Kroz praktične zadatke savladavaju unos i prikaz podataka, osnovne operatore i konverziju između različitih tipova. Kroz postepeno složenije zadatke polaznici prelaze od razumevanja pojedinačnih naredbi do pisanja svojih prvih samostalnih C# programa.", 
+        skills: [ "C# osnove", "Visual Studio", "Identifikatori i službene reči", "Tipovi podataka", "Korisnički unos i prikaz", "Operatori", "Konverzija tipova" ] 
+      }, 
+      { 
+        week: "Nedelje 5-8", 
+        title: "Logika programa i uslovno grananje", 
+        description: "U drugom mesecu polaznici uče kako program analizira podatke i donosi odluke na osnovu zadatih uslova. Savladavaju logičke i relacione operatore, naredbu if i višestruko grananje pomoću switch naredbe. Kroz veliki broj problemskih zadataka uče kako da jedan problem razlože na korake, postave odgovarajuće uslove i napišu algoritam koji pravilno reaguje na različite situacije. Poseban fokus je na razvoju algoritamskog načina razmišljanja i povezivanju više programerskih koncepata u jednu funkcionalnu celinu.", 
+        skills: [ "Algoritamsko razmišljanje", "If naredba", "Switch naredba", "Logički operatori", "Relacioni operatori", "Uslovno grananje" ] 
+      }, 
+      { 
+        week: "Nedelje 9-12", 
+        title: "Petlje, debugging i nizovi", 
+        description: "Treći mesec donosi prelazak na programe koji izvršavaju ponovljene postupke i obrađuju veći broj podataka. Polaznici upoznaju for, while i do-while petlje, kao i naredbe break i continue, a zatim uče kako da pomoću debugging alata u Visual Studio okruženju pronađu, analiziraju i isprave greške u svom kodu. Nakon toga prelaze na jednodimenzionalne i dvodimenzionalne nizove, gde uče kako da organizuju, pretražuju i obrađuju skupove podataka. Kroz praktične problemske zadatke povezuju petlje i nizove i postepeno razvijaju sposobnost rešavanja složenijih programerskih problema.", 
+        skills: [ "For petlja", "While petlja", "Do-while petlja", "Break i Continue", "Debugging", "Jednodimenzionalni nizovi", "Dvodimenzionalni nizovi" ] 
+      }, 
+      { 
+        week: "Nedelje 13-16", 
+        title: "Metode, strukture, enum i završni projekat", 
+        description: "U završnom mesecu polaznici uče kako da složenije programe podele na manje, pregledne i ponovo upotrebljive celine pomoću metoda. Savladavaju parametre i povratne vrednosti i uče kako da organizuju programski kod tako da bude pregledniji, razumljiviji i lakši za održavanje. Zatim se upoznaju sa strukturama i enumeratorima kao osnovnim načinima organizovanja podataka u C# jeziku. Stečeno znanje objedinjuju kroz završni projekat, u kojem samostalno planiraju, izrađuju i testiraju funkcionalnu konzolnu aplikaciju, primenjujući naučene koncepte, rešavajući greške i unapređujući svoje rešenje. Završni projekat predstavlja pripremu za sledeći nivo učenja i prelazak na objektno-orijentisano programiranje.", 
+        skills: [ "Metode", "Parametri i povratne vrednosti", "Organizacija programskog koda", "Strukture", "Enum", "Debugging", "Završni projekat" ] 
+      } 
+    ] 
+  },
   {
-    courseId: "sql-osnovni-nivo",
+    courseId: "csharp-srednji-nivo",
+
+    modules: [
+      {
+        week: "Nedelje 1-4",
+        title: "Objektno-orijentisano programiranje, klase i svojstva",
+        description: "U prvom mesecu polaznici prelaze sa proceduralnog načina razmišljanja na objektno-orijentisani pristup programiranju. Upoznaju osnovne principe OOP-a i uče kako se kroz klase i objekte modeluju elementi realnog problema. Detaljno se obrađuju klase, objekti, polja i svojstva, uključujući automatska svojstva, read-only svojstva, private set, init i izvedena svojstva. Polaznici zatim upoznaju modifikatore pristupa i uče kako se kontroliše vidljivost i dostupnost članova klase. Poseban deo posvećen je konstruktorima, njihovim različitim oblicima, preopterećenju, ulančavanju konstruktora, privatnim i statičkim konstruktorima, kao i razumevanju uloge finalizatora u C# jeziku.",
+        skills: ["OOP osnove", "Klase i objekti", "Fields i Properties", "Modifikatori pristupa", "Konstruktori"]
+      },
+      {
+        week: "Nedelje 5-8",
+        title: "Enkapsulacija, nasleđivanje, apstrakcija i polimorfizam",
+        description: "U drugom mesecu polaznici produbljuju razumevanje objektno-orijentisanog dizajna kroz principe enkapsulacije, apstrakcije, nasleđivanja i polimorfizma. Uče kako klase mogu da naslede ponašanje i osobine drugih klasa, kako funkcionišu jednostruko, višestepeno i hijerarhijsko nasleđivanje, kao i kako se u C# jeziku funkcionalnosti višestrukog nasleđivanja realizuju pomoću interfejsa. Obrađuju se base i protected članovi, sealed klase i metode, kao i abstract klase i metode. Kroz virtual i override metode polaznici uče kako se implementira runtime polimorfizam, dok kroz overloading upoznaju compile-time polimorfizam. Poseban akcenat stavljen je na razumevanje razlike između overloading i overriding mehanizama i njihove praktične primene.",
+        skills: ["Encapsulation", "Apstract", "Inheritance", "base keyword", "Protected members", "Sealed classes i methods", "Polymorphism", "Virtual methods","Override", "Overloading"]
+      },
+      {
+        week: "Nedelje 9-12",
+        title: "Interfejsi, exception handling i generičko programiranje",
+        description: "Treći mesec uvodi polaznike u naprednije mehanizme organizacije i kontrole programa. Uče kako se pomoću interfejsa definišu ugovori koje klase implementiraju i kako se interfejsi koriste za fleksibilniji i modularniji dizajn aplikacija. Posebno se analizira odnos između abstract class i interface koncepta i kriterijumi za njihov izbor. Zatim se obrađuje exception handling, uključujući try, catch, multiple catch, finally, nested try/catch, throw, hijerarhiju izuzetaka i kreiranje sopstvenih exception klasa. U završnom delu meseca polaznici se upoznaju sa generičkim tipovima i razumeju kako generics omogućavaju bezbedan, fleksibilan i ponovo upotrebljiv kod.",
+        skills: ["Interface", "Abstract class vs. Interface", "Exception handling", "Generics"]
+      },
+      {
+        week: "Nedelje 13-16",
+        title: "Kolekcije, delegati, lambda izrazi, LINQ i završni projekat",
+        description: "U završnom mesecu polaznici uče kako da efikasno organizuju i obrađuju veće količine podataka korišćenjem kolekcija. Najpre upoznaju osnovne negeneričke kolekcije kao što su ArrayList, Hashtable, Stack, Queue i SortedList, a zatim prelaze na savremene generičke kolekcije kao što su List<T>, Dictionary<TKey,TValue>, Queue<T>, Stack<T>, HashSet<T>, SortedSet<T>, SortedList<TKey,TValue> i SortedDictionary<TKey,TValue>. Nakon toga se uvode delegati, Action, Func i Predicate, kao i lambda izrazi koji predstavljaju važan deo modernog C# programiranja. Znanje se dalje povezuje kroz LINQ, gde polaznici uče filtriranje, selekciju, sortiranje, pretragu, agregaciju i grupisanje podataka. Na kraju meseca sve naučene koncepte objedinjuju kroz završni projekat, u kojem samostalno projektuju i razvijaju funkcionalnu C# aplikaciju sa jasnom strukturom i objektno-orijentisanim dizajnom.",
+        skills: ["Collections", "Delegates", "Lambda", "LINQ", "Završni projekat"]
+      }
+    ]
+  },
+  {
+    courseId: "sql-pocetni-nivo",
 
     modules: [
       {
@@ -152,35 +235,6 @@ export const courseCurriculums: CourseCurriculum[] = [
         title: "Povezivanje Pythona sa Web-om (Backend)",
         description: "Izrada prve dinamičke web aplikacije korišćenjem Flask ili FastAPI mikrookvira. Rad sa rutama i slanje podataka.",
         skills: ["Flask/FastAPI", "Backend", "HTTP Protokoli"]
-      }
-    ]
-  },
-  {
-    courseId: "objektno-orijentisano-programiranje-csharp",
-    modules: [
-      {
-        week: "Nedelje 1-4",
-        title: "Osnove C# jezika i konzolne aplikacije",
-        description: "Uvod u .NET ekosistem, tipove podataka, operatore i kontrolne strukture kroz razvoj interaktivnih konzolnih programa.",
-        skills: [".NET CLI", "C# Sintaksa", "Konzolne aplikacije"]
-      },
-      {
-        week: "Nedelje 5-8",
-        title: "Objektno-Orijentisano Programiranje (OOP)",
-        description: "Temeljni koncepti OOP-a: kreiranje klasa, instanciranje objekata, enkapsulacija podataka, nasleđivanje i polimorfizam.",
-        skills: ["Klase i Objekti", "Konstruktori", "Nasleđivanje"]
-      },
-      {
-        week: "Nedelje 9-12",
-        title: "Rad sa podacima i SQL Server",
-        description: "Povezivanje C# aplikacija sa relacionim bazama podataka. Pisanje osnovnih SQL upita (CRUD operacije) i korišćenje ADO.NET-a.",
-        skills: ["T-SQL", "Baze podataka", "ADO.NET"]
-      },
-      {
-        week: "Nedelje 13-16",
-        title: "Razvoj desktop aplikacija (WPF & MVVM)",
-        description: "Kreiranje modernih grafičkih interfejsa (GUI) pomoću XAML-a. Implementacija čistog softverskog arhitektonskog šablona MVVM.",
-        skills: ["WPF / XAML", "MVVM Šablon", "Data Binding"]
       }
     ]
   }

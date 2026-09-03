@@ -101,6 +101,26 @@ export const courses: Course[] = [
     featured: false
   },
   {
+    slug: "csharp-napredni-nivo",
+    title: "C#: Desktop App Development - Full Stack",
+    subtitle: "WPF, MVVM i razvoj profesionalnih .NET desktop aplikacija",
+    description:
+      "Ovaj kurs predstavlja nastavak našeg C# kursa za srednji nivo i namenjen je polaznicima koji žele da svoje znanje programiranja podignu na nivo razvoja kompletnih i struktuisanih desktop aplikacija. "
+      + "Kroz praktičan rad sa .NET 10, WPF i XAML tehnologijama polaznici uče kako da grade moderne Windows desktop aplikacije i kako da korisnički interfejs odvoje od poslovne logike i pristupa podacima. "
+      + "Poseban akcenat stavljen je na MVVM arhitekturu, data binding, ObservableObject, ObservableCollection, commands, dependency injection i organizaciju aplikacije kroz jasno definisane slojeve. "
+      + "Polaznici se upoznaju sa Entity Framework Core pristupom radu sa relacionim bazama podataka, povezivanjem WPF aplikacije sa SQL Server bazom, kreiranjem modela, DbContext-a i servisnog sloja, kao i implementacijom CRUD operacija. "
+      + "Kroz praktičan projekat razvijaju kompletnu desktop aplikaciju koja povezuje korisnički interfejs, ViewModel sloj, poslovnu logiku i bazu podataka. "
+      + "Tokom razvoja aplikacije polaznici uče kako da implementiraju pregled, dodavanje, izmenu i brisanje podataka, rad sa relacijama između entiteta, iznajmljivanje i vraćanje podataka, validaciju korisničkog unosa, obradu grešaka i asinhroni rad. "
+      + "Na kraju kursa samostalno razvijaju funkcionalnu WPF aplikaciju zasnovanu na MVVM arhitekturi i primenjuju naučene principe softverske arhitekture, objektno-orijentisanog programiranja i rada sa bazama podataka. "
+      + "Kurs predstavlja završni korak u našoj C# programskoj putanji i priprema polaznike za dalje usavršavanje u oblasti .NET softverskog inženjerstva.",
+    difficulty: "Napredni nivo",
+    duration: "4 meseca (32 časa)",
+    category: "Softversko inženjerstvo",
+    technologies: ["C #", ".NET 10", "Visual Studio", "WPF", "XAML", "MVVM", "Entity Framework Core", "SQL Server", "LINQ", "Dependency Injection", "Data Binding", "Commands", "Async/Await"],
+    image: "/images/course-csharp-napredni.png",
+    featured: false
+  },
+  {
     slug: "sql-pocetni-nivo",
     title: "SQL: Početni nivo",
     subtitle: "Od prvih tabela do samostalnog rada sa relacionim bazama podataka",
@@ -113,6 +133,24 @@ export const courses: Course[] = [
     category: "Softversko inženjerstvo",
     technologies: ["SQL", "Relacione baze podataka", "SQL upiti"],
     image: "/images/sql-osnovni-kurs.png",
+    featured: false
+  },
+  {
+    slug: "c-pocetni-nivo",
+    title: "C: Početni nivo",
+    subtitle: "Od prvih algoritama do samostalnog pisanja C programa",
+    description: "Programski jezik C predstavlja jednu od najvažnijih osnova programiranja i omogućava polaznicima da na sistematičan način upoznaju kako se grade programi, kako računar obrađuje podatke i kako se rešavaju problemski zadaci kroz algoritme i programski kod. "
+      + "Ovaj kurs je namenjen polaznicima koji žele da naprave prvi ozbiljan korak u programiranju i kroz praktičan rad upoznaju osnove programskog jezika C u Code::Blocks razvojnom okruženju. "
+      + "Kroz pažljivo osmišljene lekcije polaznici uče kako se definiše struktura C programa, šta predstavljaju identifikatori i službene reči, kako funkcionišu različiti tipovi podataka i kako se podaci unose i prikazuju u programu. "
+      + "Poseban akcenat stavljen je na razvoj algoritamskog razmišljanja i sposobnost rešavanja problema kroz sekvencijalno izvršavanje naredbi, uslovno grananje pomoću if i switch naredbi, kao i ponavljanje postupaka pomoću for, while i do-while petlji. "
+      + "Polaznici se upoznaju i sa osnovama rada sa funkcijama, uključujući njihovu deklaraciju, implementaciju, poziv i prototipove, čime uče kako da svoje programe organizuju u manje i preglednije programske celine. "
+      + "Kroz veliki broj praktičnih zadataka polaznici postepeno prelaze od jednostavnih primera do složenijih algoritamskih problema i stiču sigurnost u samostalnom pisanju C programa. "
+      + "Stečeno znanje predstavlja čvrstu osnovu za nastavak učenja C programiranja i prirodan prelazak na naš C napredni nivo, na kojem se detaljnije obrađuju nizovi, matrice, algoritmi pretrage i sortiranja, pokazivači, dinamička memorija, stringovi, datoteke i strukture.",
+    difficulty: "Početni nivo",
+    duration: "3 meseca (24 časa)",
+    category: "Softversko inženjerstvo",
+    technologies: ["C", "Code::Blocks", "Algoritamsko razmišljanje", "Programiranje", "Osnove programiranja"],
+    image: "/images/course-c-pocetni.png",
     featured: false
   },
   {

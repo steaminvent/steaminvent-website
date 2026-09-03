@@ -180,6 +180,35 @@ export const courseCurriculums: CourseCurriculum[] = [
     ]
   },
   {
+    courseId: "csharp-napredni-nivo",
+    modules: [
+      {
+        week: "Nedelje 1-4",
+        title: "WPF, XAML i arhitektura .NET desktop aplikacije",
+        description: "U prvom mesecu polaznici prelaze sa razvoja klasičnih C# aplikacija na razvoj grafičkih desktop aplikacija korišćenjem WPF tehnologije u .NET 10 okruženju. Upoznaju ulogu .NET platforme, WPF-a i XAML-a i uče kako se definiše struktura korisničkog interfejsa pomoću različitih layout panela i standardnih WPF kontrola. Obrađuju se Grid, StackPanel, DockPanel, WrapPanel, DataGrid, TextBox, ComboBox, CheckBox, Button, ListBox i drugi elementi korisničkog interfejsa. Polaznici zatim uče konceptualno razdvajanje prezentacionog sloja od ostatka aplikacije, organizaciju WPF projekta, rad sa Resources i osnovama kreiranja stilizovanog i preglednog korisničkog interfejsa. U završnom delu meseca uvode se UserControl, DataTemplate, Style, Trigger i Value Converter koncepti koji predstavljaju osnovu za izgradnju funkcionalnijeg i profesionalnijeg WPF interfejsa.",
+        skills: ["WPF", "XAML", "Window", "Grid", "WPF kontrole", "Styles", "Resources", "DataTemplate", "Value Converter"]
+      },
+      {
+        week: "Nedelje 5-8",
+        title: "MVVM, Data Binding, Commands i Dependency Injection",
+        description: "U drugom mesecu polaznici detaljno upoznaju MVVM arhitekturu i uče kako da WPF aplikaciju organizuju tako da korisnički interfejs bude odvojen od aplikacione i poslovne logike. Obrađuju se Model, View i ViewModel u praktičnom kontekstu, kao i ObservableObject, INotifyPropertyChanged, ObservableProperty i ObservableCollection. Polaznici uče kako funkcioniše Data Binding, uključujući OneWay, TwoWay i binding kolekcija, selected objekata i UI svojstava. Poseban deo kursa posvećen je Commands mehanizmu kroz ICommand, RelayCommand i AsyncRelayCommand, kao i povezivanju komandi sa kontrolama u XAML-u. Nakon toga se uvodi Dependency Injection i organizacija servisa pomoću interfejsa i konkretnih implementacija. Kroz praktične primere polaznici povezuju View, ViewModel i servisni sloj i grade aplikaciju bez direktnog mešanja poslovne logike i korisničkog interfejsa.",
+        skills: ["MVVM", "View / ViewModel / Model", "INotifyPropertyChanged", "Data Binding", "ICommand", "Dependency Injection", "Interfaces", "Service Layer"]
+      },
+      {
+        week: "Nedelje 9-12",
+        title: "Entity Framework Core, SQL Server i rad sa podacima",
+        description: "U trećem mesecu polaznici povezuju WPF aplikaciju sa relacionom bazom podataka i upoznaju kompletan tok rada sa podacima kroz Entity Framework Core. Kreiraju SQL Server bazu, tabele i relacije između entiteta i uče kako se C# modeli povezuju sa bazom preko DbContext klase. Obrađuju se DbSet, konfiguracija konteksta, rad sa relacijama, navigacionim svojstvima i LINQ upitima. Polaznici zatim uvode Data Access Layer i Business Logic Layer i uče kako da pristup podacima organizuju kroz servisne interfejse i implementacije. Poseban fokus stavljen je na CRUD operacije, asinhroni rad sa bazom, filtriranje i selekciju podataka, proveru uslova pre izvršavanja operacija i obradu izuzetaka. Na kraju meseca WPF aplikacija dobija funkcionalnu vezu sa bazom podataka i omogućava učitavanje i prikaz stvarnih podataka kroz ViewModel i Data Binding.",
+        skills: ["SQL Server", "Entity Framework Core", "DbContext", "DbSet","EF Core modeli", "LINQ", "CRUD","Database operations"]
+      },
+      {
+        week: "Nedelje 13-16",
+        title: "Kompletna WPF/MVVM aplikacija i završni projekat",
+        description: "U završnom mesecu polaznici objedinjuju sve naučene tehnologije i principe kroz razvoj kompletne WPF desktop aplikacije zasnovane na MVVM arhitekturi. Kao praktični projekat razvijaju aplikaciju za upravljanje igrama, korisnicima i iznajmljivanjima, pri čemu se povezuju WPF interfejs, ViewModel sloj, servisni sloj, Entity Framework Core i SQL Server baza. Implementiraju se prikaz i selekcija podataka, dodavanje novih zapisa, izmena postojećih zapisa i brisanje podataka uz potvrdu korisnika. Zatim se implementiraju poslovne funkcionalnosti poput iznajmljivanja i vraćanja igre, provere dostupnosti i automatskog osvežavanja podataka. Polaznici uče kako da koriste komande i binding umesto direktne poslovne logike u code-behind fajlovima, kao i kako da obrađuju greške, prikazuju statusne poruke i organizuju UI na način koji je pregledan i lak za održavanje. Kurs se završava samostalnim završnim projektom u kojem polaznici kreiraju sopstvenu WPF aplikaciju i primenjuju kompletnu arhitekturu naučenu tokom kursa.",
+        skills: ["WPF app", "MVVM pattern", "CRUD", "Commands", "EF Core", "SQL Server", "Dependency Injection", "Validation", "Završni projekat"]
+      }
+    ]
+  },
+  {
     courseId: "sql-pocetni-nivo",
 
     modules: [
@@ -206,6 +235,31 @@ export const courseCurriculums: CourseCurriculum[] = [
         title: "Povezivanje tabela i završni projekat",
         description: "U završnom delu kursa polaznici uče kako da kombinuju podatke iz više tabela pomoću JOIN naredbi. Stečeno znanje objedinjuju kroz završni praktični projekat, u okviru kojeg samostalno kreiraju malu relacionu bazu, unose podatke i izrađuju skup SQL upita kojima rešavaju konkretne problemske zadatke.",
         skills: ["JOIN", "Povezivanje tabela", "Složeni SELECT upiti", "Rad sa više tabela", "Rešavanje problemskih zadataka", "Samostalni rad sa bazom", "Završni projekat"]
+      }
+    ]
+  },
+  {
+    courseId: "c-pocetni-nivo",
+
+    modules: [
+      {
+        week: "Nedelje 1-4",
+        title: "Algoritmi, C osnove i tipovi podataka",
+        description: "U prvom modulu polaznici se upoznaju sa osnovama algoritamskog razmišljanja i načinom rešavanja problema kroz jasno definisane korake. Nakon uvoda u algoritme i Code::Blocks razvojno okruženje, upoznaju strukturu programskog jezika C i osnovne elemente potrebne za pisanje prvih programa. Obrađuju se identifikatori, službene reči i osnovna pravila organizacije C programa. Posebna pažnja posvećena je razumevanju načina na koji računar predstavlja podatke, uključujući binarni brojni sistem, kao i različitim tipovima podataka. Polaznici uče o celobrojnim, realnim, znakovnim i logičkim podacima, numeričkim i simboličkim konstantama, kao i osnovama rada sa stringovima. Kroz praktične zadatke upoznaju način unosa i prikaza podataka i počinju da samostalno pišu jednostavne C programe.",
+        skills: ["Algoritmi", "Code::Blocks", "Struktura C programa", "Identifikatori", "Službene reči", "Binarni brojni sistem", "Tipovi podataka", "Unos i prikaz podataka"]
+      },
+      {
+        week: "Nedelje 5-8",
+        title: "Naredbe, grananje i ciklusi",
+        description: "U drugom modulu polaznici uče kako se formira tok izvršavanja programa i kako se program prilagođava različitim situacijama na osnovu zadatih uslova. Upoznaju proste naredbe i sekvence odnosno blokove naredbi, a zatim savladavaju naredbe grananja if i switch. Nakon toga prelaze na cikluse for, while i do-while, kroz koje uče kako da efikasno rešavaju probleme koji zahtevaju ponavljanje određenih postupaka. Naredbe break i continue koriste za precizniju kontrolu toka ciklusa. Kroz veliki broj praktičnih zadataka polaznici povezuju sekvencijalno izvršavanje, grananje i ponavljanje i postepeno prelaze na složenije algoritamske probleme. Poseban fokus je na razvijanju sposobnosti da se problem analizira, razloži na korake i pretvori u jasno i funkcionalno C rešenje.",
+        skills: ["Proste naredbe", "Sekvenca naredbi", "Blok naredbi", "If naredba", "Switch naredba", "For petlja", "While petlja", "Do-while petlja", "Break", "Continue"]
+      },
+
+      {
+        week: "Nedelje 9-12",
+        title: "Funkcije i samostalno programiranje",
+        description: "U završnom modulu polaznici upoznaju funkcije kao osnovu organizovanja i modularizacije programskog koda. Uče kako se funkcija deklariše i implementira, kako se poziva i koja je uloga prototipa funkcije. Kroz praktične zadatke uče da složenije probleme podele na manje i logički povezane programske celine, čime njihova rešenja postaju preglednija, razumljivija i lakša za održavanje. U završnom delu modula povezuju sve prethodno naučene koncepte: tipove podataka, unos i prikaz podataka, sekvence, grananje, cikluse i funkcije. Kroz završne problemske zadatke samostalno analiziraju problem, kreiraju algoritam i implementiraju kompletno C rešenje. Na taj način stiču čvrstu osnovu za nastavak učenja i prirodan prelazak na C napredni nivo.",
+        skills: ["Funkcije", "Modularno programiranje", "Organizacija programskog koda", "Samostalno rešavanje problema", "Završni problemski zadaci"]
       }
     ]
   },

@@ -119,6 +119,39 @@ export const courseCurriculums: CourseCurriculum[] = [
       }
     ]
   },
+  {
+    courseId: "python-web-development-api",
+
+    modules: [
+      {
+        week: "Nedelje 1-4",
+        title: "Python na webu: klijent, server i Flask",
+        description: "U prvom mesecu polaznici prelaze iz klasičnog programiranja u svet web aplikacija i upoznaju osnovni način na koji web funkcioniše. Obrađuju odnos između klijenta i servera, HTTP protokol, zahteve i odgovore, URL adrese i osnovnu strukturu web aplikacije. Nakon toga upoznaju Flask kao Python framework za razvoj web aplikacija i uče kako se kreiraju rute, obrađuju zahtevi i generišu web stranice. Kroz Jinja templejte povezuju Python logiku sa HTML stranicama, dok kroz organizaciju projekta uče kako se web aplikacija odvaja na logičke celine. Cilj prvog meseca je da polaznik razume šta se dešava kada korisnik otvori web stranicu i da samostalno napravi osnovnu Flask aplikaciju.",
+        skills: ["Client-server arhitektura", "HTTP", "Request / Response", "URL i routing", "Flask", "Jinja templates", "Struktura web projekta"]
+      },
+
+      {
+        week: "Nedelje 5-8",
+        title: "Dinamičke web aplikacije i rad sa bazom podataka",
+        description: "U drugom mesecu polaznici prelaze sa statičkih stranica na stvarne aplikacije koje primaju i obrađuju podatke. Uče kako se obrađuju HTML forme, kako se podaci proveravaju i validiraju i kako se koriste sesije za čuvanje stanja između zahteva. Zatim uvode bazu podataka i upoznaju osnovne principe čuvanja, preuzimanja, izmene i brisanja podataka. Kroz SQLite i SQLAlchemy povezuju Python aplikaciju sa bazom i kreiraju CRUD funkcionalnosti. Poseban akcenat stavljen je na povezivanje modela, poslovne logike i web interfejsa, kako bi polaznici razumeli kako nastaje kompletna web funkcionalnost od korisničkog unosa do trajnog čuvanja podataka.",
+        skills: ["HTML forme", "Obrada podataka", "Validacija", "Sesije", "SQLite", "SQLAlchemy", "CRUD"]
+      },
+
+      {
+        week: "Nedelje 9-12",
+        title: "REST API, JSON i komunikacija između aplikacija",
+        description: "Treći mesec uvodi polaznike u razvoj programskih interfejsa koji omogućavaju da različite aplikacije međusobno razmenjuju podatke. Uče šta je API, kako REST pristup organizuje resurse i kako se koriste HTTP metode GET, POST, PUT i DELETE. Posebnu pažnju posvećujemo HTTP statusnim kodovima, JSON formatu i strukturi API odgovora. Polaznici samostalno razvijaju REST endpoint-e povezane sa bazom podataka i testiraju ih kroz odgovarajuće alate. Kroz praktične zadatke povezuju postojeću Flask aplikaciju sa API slojem i razumeju razliku između klasičnog web prikaza i API servisa koji podatke isporučuje drugim aplikacijama.",
+        skills: ["REST API", "HTTP metode", "GET / POST / PUT / DELETE", "JSON", "API endpoint"]
+      },
+
+      {
+        week: "Nedelje 13-16",
+        title: "Kompletna web aplikacija i završni projekat",
+        description: "U završnom mesecu polaznici objedinjuju znanja stečena tokom kursa i razvijaju kompletnu web aplikaciju zasnovanu na Pythonu. Uče kako da projekat organizuju u više logičkih komponenti, odvoje konfiguraciju od poslovne logike i pravilno povežu rute, modele, bazu podataka i korisnički interfejs. U završnoj fazi uvode osnovnu autentifikaciju korisnika, obradu grešaka i JavaScript osnove za slanje podataka bez potpunog učitavanja stranice. Završni projekat mora da sadrži rad sa bazom podataka, korisničke funkcionalnosti i REST API deo, čime polaznici prvi put grade zaokružen softverski sistem. Kurs se završava prezentacijom projekta, demonstracijom funkcionalnosti i code review-om, kroz koji polaznici analiziraju organizaciju aplikacije i kvalitet sopstvenog koda.",
+        skills: ["WEB app", "Autentifikacija", "JavaScript", "Frontend & API", "Obrada grešaka", "Završni web projekat"]
+      }
+    ]
+  },
   { 
     courseId: "csharp-pocetni-nivo", 
     
@@ -209,36 +242,6 @@ export const courseCurriculums: CourseCurriculum[] = [
     ]
   },
   {
-    courseId: "sql-pocetni-nivo",
-
-    modules: [
-      {
-        week: "Nedelje 1-2",
-        title: "Osnove relacionih baza i kreiranje podataka",
-        description: "U prvom delu kursa polaznici upoznaju osnovne principe relacionih baza podataka i način na koji su podaci organizovani u tabele. Uče šta predstavljaju baza podataka, tabela, red, kolona, primarni i strani ključ, kao i kako se tabele međusobno povezuju. Nakon upoznavanja sa Microsoft SQL Server okruženjem i SQL Server Management Studio alatom, polaznici kreiraju sopstvenu bazu podataka, definišu tabele i tipove podataka i unose početne podatke pomoću SQL naredbi.",
-        skills: ["Osnove relacionih baza podataka", "Kreiranje baze podataka", "Kreiranje tabela", "Tipovi podataka", "Primary Key i Foreign Key", "INSERT naredba"]
-      },
-      {
-        week: "Nedelje 3-4",
-        title: "SELECT upiti i filtriranje podataka",
-        description: "U drugom delu polaznici počinju aktivno da rade sa podacima pomoću SELECT naredbe. Uče kako da iz tabela izdvoje željene kolone i redove, kako da primene različite uslove i kako da rezultate upita sortiraju i organizuju. Kroz praktične zadatke obrađuju WHERE, AND, OR, NOT, BETWEEN, IN, LIKE, NULL i DISTINCT, a zatim povezuju više uslova kako bi rešavali konkretne probleme nad bazom podataka.",
-        skills: ["SELECT i FROM", "WHERE", "AND / OR / NOT", "BETWEEN", "IN / NOT IN", "LIKE / NOT LIKE", "NULL vrednosti", "DISTINCT", "ORDER BY"]
-      },
-      {
-        week: "Nedelje 5-6",
-        title: "Obrada i analiza podataka",
-        description: "U trećem delu kursa polaznici prelaze sa jednostavnog prikaza podataka na njihovu obradu i analizu. Upoznaju agregatne funkcije COUNT, SUM, AVG, MIN i MAX, kao i ROUND i aritmetičke izraze u SQL upitima. Nakon toga uče kako se podaci grupišu pomoću GROUP BY i kako se grupe filtriraju pomoću HAVING. Kroz praktične zadatke polaznici uče da iz baze izvuku korisne informacije kao što su ukupan broj zapisa, prosečne vrednosti, minimalne i maksimalne vrednosti i rezultati po grupama.",
-        skills: ["COUNT", "SUM", "AVG", "MIN i MAX", "ROUND", "Aritmetički izrazi", "GROUP BY", "HAVING", "Analiza podataka"]
-      },
-      {
-        week: "Nedelje 7-8",
-        title: "Povezivanje tabela i završni projekat",
-        description: "U završnom delu kursa polaznici uče kako da kombinuju podatke iz više tabela pomoću JOIN naredbi. Stečeno znanje objedinjuju kroz završni praktični projekat, u okviru kojeg samostalno kreiraju malu relacionu bazu, unose podatke i izrađuju skup SQL upita kojima rešavaju konkretne problemske zadatke.",
-        skills: ["JOIN", "Povezivanje tabela", "Složeni SELECT upiti", "Rad sa više tabela", "Rešavanje problemskih zadataka", "Samostalni rad sa bazom", "Završni projekat"]
-      }
-    ]
-  },
-  {
     courseId: "c-pocetni-nivo",
 
     modules: [
@@ -297,31 +300,32 @@ export const courseCurriculums: CourseCurriculum[] = [
     ]
   },
   {
-    courseId: "uvod-u-kodiranje-python-i-web",
+    courseId: "sql-pocetni-nivo",
+
     modules: [
       {
-        week: "Nedelje 1-4",
-        title: "Uvod u programiranje i Python sintaksu",
-        description: "Postavljanje razvojnog okruženja, rad sa varijablama, osnovnim tipovima podataka i kontrolom toka (if/else uslovi i petlje).",
-        skills: ["VS Code", "Sintaksa", "Algoritamski način razmišljanja"]
+        week: "Nedelje 1-2",
+        title: "Osnove relacionih baza i kreiranje podataka",
+        description: "U prvom delu kursa polaznici upoznaju osnovne principe relacionih baza podataka i način na koji su podaci organizovani u tabele. Uče šta predstavljaju baza podataka, tabela, red, kolona, primarni i strani ključ, kao i kako se tabele međusobno povezuju. Nakon upoznavanja sa Microsoft SQL Server okruženjem i SQL Server Management Studio alatom, polaznici kreiraju sopstvenu bazu podataka, definišu tabele i tipove podataka i unose početne podatke pomoću SQL naredbi.",
+        skills: ["Osnove relacionih baza podataka", "Kreiranje baze podataka", "Kreiranje tabela", "Tipovi podataka", "Primary Key i Foreign Key", "INSERT naredba"]
       },
       {
-        week: "Nedelje 5-8",
-        title: "Strukture podataka i funkcije",
-        description: "Ovladavanje listama, rečnicima i torkama. Pisanje modularnog koda kroz funkcije i rukovanje izuzecima (try/except).",
-        skills: ["Liste & Rečnici", "Modularnost", "Debuggovanje"]
+        week: "Nedelje 3-4",
+        title: "SELECT upiti i filtriranje podataka",
+        description: "U drugom delu polaznici počinju aktivno da rade sa podacima pomoću SELECT naredbe. Uče kako da iz tabela izdvoje željene kolone i redove, kako da primene različite uslove i kako da rezultate upita sortiraju i organizuju. Kroz praktične zadatke obrađuju WHERE, AND, OR, NOT, BETWEEN, IN, LIKE, NULL i DISTINCT, a zatim povezuju više uslova kako bi rešavali konkretne probleme nad bazom podataka.",
+        skills: ["SELECT i FROM", "WHERE", "AND / OR / NOT", "BETWEEN", "IN / NOT IN", "LIKE / NOT LIKE", "NULL vrednosti", "DISTINCT", "ORDER BY"]
       },
       {
-        week: "Nedelje 9-12",
-        title: "Osnove Web-a: HTML5 & CSS3",
-        description: "Prelazak na vizuelni deo. Kreiranje strukture web stranica, stilizovanje pomoću CSS-a i uvod u responzivni dizajn (Flexbox).",
-        skills: ["HTML5", "CSS3 Layouts", "UI Dizajn"]
+        week: "Nedelje 5-6",
+        title: "Obrada i analiza podataka",
+        description: "U trećem delu kursa polaznici prelaze sa jednostavnog prikaza podataka na njihovu obradu i analizu. Upoznaju agregatne funkcije COUNT, SUM, AVG, MIN i MAX, kao i ROUND i aritmetičke izraze u SQL upitima. Nakon toga uče kako se podaci grupišu pomoću GROUP BY i kako se grupe filtriraju pomoću HAVING. Kroz praktične zadatke polaznici uče da iz baze izvuku korisne informacije kao što su ukupan broj zapisa, prosečne vrednosti, minimalne i maksimalne vrednosti i rezultati po grupama.",
+        skills: ["COUNT", "SUM", "AVG", "MIN i MAX", "ROUND", "Aritmetički izrazi", "GROUP BY", "HAVING", "Analiza podataka"]
       },
       {
-        week: "Nedelje 13-16",
-        title: "Povezivanje Pythona sa Web-om (Backend)",
-        description: "Izrada prve dinamičke web aplikacije korišćenjem Flask ili FastAPI mikrookvira. Rad sa rutama i slanje podataka.",
-        skills: ["Flask/FastAPI", "Backend", "HTTP Protokoli"]
+        week: "Nedelje 7-8",
+        title: "Povezivanje tabela i završni projekat",
+        description: "U završnom delu kursa polaznici uče kako da kombinuju podatke iz više tabela pomoću JOIN naredbi. Stečeno znanje objedinjuju kroz završni praktični projekat, u okviru kojeg samostalno kreiraju malu relacionu bazu, unose podatke i izrađuju skup SQL upita kojima rešavaju konkretne problemske zadatke.",
+        skills: ["JOIN", "Povezivanje tabela", "Složeni SELECT upiti", "Rad sa više tabela", "Rešavanje problemskih zadataka", "Samostalni rad sa bazom", "Završni projekat"]
       }
     ]
   }

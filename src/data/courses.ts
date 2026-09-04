@@ -40,6 +40,18 @@ export const courses: Course[] = [
     featured: true
   },
   {
+    slug: "arduino-robotika-i-iot",
+    title: "Arduino Robotika & Pametni IoT Sistemi",
+    subtitle: "Programiranje mikrokontrolera i kreiranje pametnih uređaja",
+    description: "Ulazak u svet Interneta Stvari (IoT). Naučite kako da programirate Arduino i ESP32, povežete senzore koji čitaju podatke iz okruženja, upravljate aktuatorima i bežično šaljete informacije putem interneta.",
+    difficulty: "Srednji nivo",
+    duration: "4 meseca (32 časa)",
+    category: "Elektronika & IoT",
+    technologies: ["Arduino", "C++", "ESP32", "Senzori & Aktuatori"],
+    image: "/images/course-arduino.png",
+    featured: true
+  },
+  {
     slug: "python-pocetni-nivo",
     title: "Python: Početni nivo",
     subtitle: "Od prvih linija koda do samostalnih konzolnih aplikacija",
@@ -65,6 +77,23 @@ export const courses: Course[] = [
     category: "Softversko inženjerstvo",
     technologies: ["Python", "VS Code", "OOP", "Rad sa fajlovima", "JSON"],
     image: "/images/python-srednji-nivo.png",
+    featured: false
+  },
+  {
+    slug: "python-web-development-api",
+    title: "Python: Web Development & API",
+    subtitle: "Od Python programa do funkcionalnih web aplikacija i REST API servisa",
+    description: "Nakon savladavanja Python početnog i srednjeg nivoa, polaznici na ovom kursu prelaze sa izrade samostalnih programa na razvoj aplikacija koje funkcionišu kroz web. "
+      + "Uče kako funkcioniše komunikacija između korisnika, web pregledača i serverske aplikacije, kako Python može da obrađuje web zahteve i kako se pomoću Flask frameworka grade funkcionalne web aplikacije. "
+      + "Kroz praktičan rad upoznaju HTML i CSS u kontekstu serverski generisanih stranica, obradu formi, validaciju podataka, rad sa sesijama i povezivanje aplikacije sa bazom podataka. "
+      + "Poseban deo kursa posvećen je REST API konceptu, HTTP metodama, JSON podacima i izradi sopstvenih API endpointa koje mogu koristiti druge aplikacije. "
+      + "Polaznici kroz razvoj jedne kompletne web aplikacije povezuju Python, bazu podataka i web interfejs, organizuju projekat u više komponenti i uče kako se aplikacija priprema za realnu upotrebu. "
+      + "Kurs predstavlja prirodan nastavak Python srednjeg nivoa i uvodi polaznike u jednu od najvažnijih praktičnih primena Pythona — backend i web development.",
+    difficulty: "Napredni nivo",
+    duration: "4 meseca (32 časa)",
+    category: "Softversko inženjerstvo",
+    technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript", "SQLite", "SQLAlchemy", "REST API"],
+    image: "/images/python-web-development-api.png",
     featured: false
   },
   { 
@@ -121,21 +150,6 @@ export const courses: Course[] = [
     featured: false
   },
   {
-    slug: "sql-pocetni-nivo",
-    title: "SQL: Početni nivo",
-    subtitle: "Od prvih tabela do samostalnog rada sa relacionim bazama podataka",
-    description: "SQL je standardni jezik za rad sa relacionim bazama podataka i predstavlja jednu od najvažnijih veština u savremenom programiranju i obradi podataka. "
-                + "Ovaj kurs je namenjen polaznicima koji žele da nauče kako se podaci organizuju u bazama, kako se kreiraju i povezuju tabele i kako se pomoću SQL upita podaci pretražuju, filtriraju, obrađuju i analiziraju. "
-                + "Kroz veliki broj praktičnih primera i zadataka, polaznici rade u Microsoft SQL Server okruženju i postepeno prelaze od osnovnih SQL naredbi do složenijih upita koji povezuju više tabela. "
-                + "Kurs predstavlja čvrstu osnovu za nastavak učenja SQL-a i prirodan uvod u naš SQL srednji nivo.",
-    difficulty: "Početni nivo",
-    duration: "2 meseca (16 časova)",
-    category: "Softversko inženjerstvo",
-    technologies: ["SQL", "Relacione baze podataka", "SQL upiti"],
-    image: "/images/sql-osnovni-kurs.png",
-    featured: false
-  },
-  {
     slug: "c-pocetni-nivo",
     title: "C: Početni nivo",
     subtitle: "Od prvih algoritama do samostalnog pisanja C programa",
@@ -172,6 +186,21 @@ export const courses: Course[] = [
     featured: false
   },
   {
+    slug: "sql-pocetni-nivo",
+    title: "SQL: Početni nivo",
+    subtitle: "Od prvih tabela do samostalnog rada sa relacionim bazama podataka",
+    description: "SQL je standardni jezik za rad sa relacionim bazama podataka i predstavlja jednu od najvažnijih veština u savremenom programiranju i obradi podataka. "
+                + "Ovaj kurs je namenjen polaznicima koji žele da nauče kako se podaci organizuju u bazama, kako se kreiraju i povezuju tabele i kako se pomoću SQL upita podaci pretražuju, filtriraju, obrađuju i analiziraju. "
+                + "Kroz veliki broj praktičnih primera i zadataka, polaznici rade u Microsoft SQL Server okruženju i postepeno prelaze od osnovnih SQL naredbi do složenijih upita koji povezuju više tabela. "
+                + "Kurs predstavlja čvrstu osnovu za nastavak učenja SQL-a i prirodan uvod u naš SQL srednji nivo.",
+    difficulty: "Početni nivo",
+    duration: "2 meseca (16 časova)",
+    category: "Softversko inženjerstvo",
+    technologies: ["SQL", "Relacione baze podataka", "SQL upiti"],
+    image: "/images/sql-osnovni-kurs.png",
+    featured: false
+  },
+  {
     slug: "prakticna-elektronika-i-3d-stampa",
     title: "Elektronika & 3D Štampa",
     subtitle: "Od električnih šema do opipljivih fizičkih uređaja",
@@ -181,30 +210,6 @@ export const courses: Course[] = [
     category: "Elektronika & IoT",
     technologies: ["Lemljenje", "Multimetar", "3D Modelovanje", "3D Štampa"],
     image: "/images/course-electronics.png",
-    featured: false
-  },
-  {
-    slug: "arduino-robotika-i-iot",
-    title: "Arduino Robotika & Pametni IoT Sistemi",
-    subtitle: "Programiranje mikrokontrolera i kreiranje pametnih uređaja",
-    description: "Ulazak u svet Interneta Stvari (IoT). Naučite kako da programirate Arduino i ESP32, povežete senzore koji čitaju podatke iz okruženja, upravljate aktuatorima i bežično šaljete informacije putem interneta.",
-    difficulty: "Srednji nivo",
-    duration: "4 meseca (32 časa)",
-    category: "Elektronika & IoT",
-    technologies: ["Arduino", "C++", "ESP32", "Senzori & Aktuatori"],
-    image: "/images/course-arduino.png",
-    featured: true
-  },
-  {
-    slug: "uvod-u-kodiranje-python-i-web",
-    title: "Uvod u Kodiranje: Python & Web",
-    subtitle: "Prvi koraci u profesionalnom tekstualnom programiranju",
-    description: "Prelazak sa vizuelnog na kucani kod. Kroz Python učimo rešavanje logičkih problema, dok kroz HTML, CSS i osnove JavaScript-a gradimo prve moderne veb stranice.",
-    difficulty: "Srednji nivo",
-    duration: "4 meseca (32 časa)",
-    category: "Softversko inženjerstvo",
-    technologies: ["Python", "HTML5", "CSS3", "JavaScript"],
-    image: "/images/course-python.png",
     featured: false
   },
   {

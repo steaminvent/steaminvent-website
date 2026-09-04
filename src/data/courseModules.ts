@@ -264,6 +264,39 @@ export const courseCurriculums: CourseCurriculum[] = [
     ]
   },
   {
+    courseId: "c-napredni-nivo",
+    
+    modules: [
+      {
+        week: "Nedelje 1-4",
+        title: "Nizovi, algoritmi pretrage i sortiranja",
+        description: "U prvom modulu polaznici prelaze sa osnovnih programskih konstrukcija na organizaciju i obradu većeg broja podataka. Detaljno se obrađuju jednodimenzionalni nizovi odnosno vektori, njihova eksplicitna inicijalizacija, indeksi i načini za upis i ispis elemenata. Polaznici kroz praktične zadatke uče kako da analiziraju sadržaj niza i implementiraju linearno pretraživanje. Poseban deo modula posvećen je osnovnim algoritmima sortiranja, uključujući selection sort i bubble sort, pri čemu polaznici razumeju logiku rada algoritma i način njegove implementacije u C jeziku. Obrađuju se i operacije left shift i right shift, a kroz kombinovanje nizova, funkcija i petlji rešavaju se složeniji algoritamski problemi.",
+        skills: ["Vektori", "Upis i ispis elemenata", "Linearno pretraživanje", "Selection Sort", "Bubble Sort", "Left Shift", "Right Shift"]
+      },
+
+      {
+        week: "Nedelje 5-8",
+        title: "Matrice, pokazivači i adresna aritmetika",
+        description: "U drugom modulu polaznici prelaze na dvodimenzionalne nizove odnosno matrice i uče kako se podaci organizuju u redove i kolone. Obrađuju se inicijalizacija dvodimenzionalnih nizova i pristup pojedinačnim elementima, uz rešavanje problemskih zadataka koji zahtevaju obradu redova, kolona i kompletnih matrica. Nakon rada sa matricama uvode se pokazivači kao jedan od ključnih koncepata programskog jezika C. Polaznici uče kako se pokazivač definiše, kako se povezuje sa promenljivom i memorijskom adresom i kako funkcioniše adresna aritmetika. Kroz praktične primere povezuju pokazivače sa nizovima i funkcijama i stvaraju osnovu za razumevanje dinamičkog upravljanja memorijom.",
+        skills: ["Matrice", "Pokazivači", "Memorijske adrese", "Pokazivači i nizovi", "Pokazivači i funkcije"]
+      },
+
+      {
+        week: "Nedelje 9-12",
+        title: "Dinamička memorija i rad sa stringovima",
+        description: "Treći modul predstavlja jedan od najvažnijih koraka u prelasku na naprednije C programiranje. Polaznici produbljuju razumevanje pokazivača i upoznaju dinamičku dodelu memorije, učeći kako program tokom izvršavanja može da zahteva i koristi memorijski prostor prema potrebi. Kroz praktične zadatke povezuju dinamičku memoriju sa nizovima i funkcijama i uče da razmišljaju o životnom ciklusu podataka i memorijskih resursa. Nakon toga prelaze na stringove, njihovu deklaraciju i inicijalizaciju, unos i ispis i osnovne funkcije za rad sa znakovima i tekstualnim podacima. Poseban fokus stavljen je na povezivanje stringova sa funkcijama, kako bi polaznici mogli da grade složenija rešenja za obradu tekstualnih podataka.",
+        skills: ["Dinamička memorije", "Rad sa memorijskim prostorom", "string", "Stringovi i funkcije", "Obrada tekstualnih podataka"]
+      },
+
+      {
+        week: "Nedelje 13-16",
+        title: "Datoteke, strukture i složena organizacija podataka",
+        description: "U završnom modulu polaznici uče kako da podatke iz svojih programa trajno čuvaju i ponovo koriste pomoću datoteka. Upoznaju definiciju i podelu datoteka, različite režime njihovog otvaranja i osnovne funkcije za rad sa datotekama. Posebna pažnja posvećena je funkcijama fgetc() i fputc(), kao i razumevanju razlike između relativne i apsolutne putanje. Nakon toga uvode se strukture kao način organizovanja više međusobno povezanih podataka u jednu logičku celinu. Kroz praktične zadatke polaznici povezuju strukture sa nizovima, stringovima, funkcijama i datotekama i uče da grade složenija programska rešenja. U završnom delu kursa objedinjuju sve naučene koncepte kroz kompleksnije problemske zadatke i praktičan projekat, čime razvijaju sposobnost samostalnog projektovanja i implementacije C programa.",
+        skills: ["Datoteke", "Strukture","Završni projekat"]
+      }
+    ]
+  },
+  {
     courseId: "uvod-u-kodiranje-python-i-web",
     modules: [
       {

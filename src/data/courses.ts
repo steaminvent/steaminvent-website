@@ -154,6 +154,24 @@ export const courses: Course[] = [
     featured: false
   },
   {
+    slug: "c-napredni-nivo",
+    title: "C: Napredni nivo",
+    subtitle: "Od rada sa nizovima do razumevanja memorije i složenih podataka",
+    description: "C programski jezik omogućava programerima da razumeju rad sa podacima, memorijom i programskim strukturama na znatno dubljem nivou nego većina savremenih jezika visokog nivoa. "
+      + "Ovaj kurs je namenjen polaznicima koji su savladali osnove programskog jezika C i žele da svoje znanje podignu na viši nivo kroz rad sa složenijim strukturama podataka i važnim konceptima koji predstavljaju temelj ozbiljnog C programiranja. "
+      + "Kurs počinje radom sa jednodimenzionalnim i dvodimenzionalnim nizovima, kroz koje polaznici uče kako da organizuju, pretražuju i obrađuju veći broj podataka. Poseban akcenat stavljen je na implementaciju osnovnih algoritama pretraživanja i sortiranja, kao i na praktičnu obradu vektora i matrica. "
+      + "Nakon toga polaznici prelaze na jedan od najvažnijih delova C jezika — pokazivače i memoriju. Uče kako se definišu i koriste pokazivači, kako funkcioniše adresna aritmetika i na koji način se memorija dinamički dodeljuje tokom izvršavanja programa. "
+      + "Znanje pokazivača povezuju sa radom sa stringovima, upoznajući deklaraciju i inicijalizaciju stringova, unos i ispis, kao i osnovne funkcije za obradu znakova i stringova i njihovu primenu unutar funkcija. "
+      + "U završnom delu kursa polaznici uče kako da podatke trajno čuvaju pomoću datoteka, razumeju različite režime otvaranja i koriste osnovne funkcije za čitanje i upis podataka, uključujući fgetc() i fputc(), kao i relativne i apsolutne putanje. "
+      + "Kurs se završava radom sa strukturama, kroz koje polaznici uče kako da više povezanih podataka organizuju u složene logičke celine. Stečeno znanje objedinjuju kroz praktične zadatke i složenije programske probleme, čime stiču čvrstu osnovu za dalje učenje struktura podataka, algoritama i naprednog programiranja.",
+    difficulty: "Napredni nivo",
+    duration: "4 meseca (32 časa)",
+    category: "Softversko inženjerstvo",
+    technologies: ["C", "Code::Blocks", "Pokazivači i memorija", "Napredno programiranje"],
+    image: "/images/course-c-napredni.png",
+    featured: false
+  },
+  {
     slug: "prakticna-elektronika-i-3d-stampa",
     title: "Elektronika & 3D Štampa",
     subtitle: "Od električnih šema do opipljivih fizičkih uređaja",

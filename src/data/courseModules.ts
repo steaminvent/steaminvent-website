@@ -152,6 +152,64 @@ export const courseCurriculums: CourseCurriculum[] = [
       }
     ]
   },
+  {
+    courseId: "ai-machine-learning",
+    modules: [
+      {
+        week: "Nedelje 1-4",
+        title: "AI, podaci i Machine Learning osnove",
+        description: "U prvom mesecu polaznici ulaze u oblast veštačke inteligencije i upoznaju razliku između AI, Machine Learning-a i Deep Learning-a. Uče šta je Machine Learning, na koji način modeli uče iz podataka i kako se realan problem pretvara u problem koji je moguće rešavati korišćenjem podataka. Obrađuju se osnovni pojmovi kao što su dataset, sample, feature, label, model, training, validation, test i inference, kao i razlika između supervised i unsupervised learning pristupa. "
+          + "Nakon konceptualnog uvoda polaznici koriste NumPy za rad sa numeričkim nizovima, višedimenzionalnim podacima i osnovnim numeričkim operacijama, a zatim Pandas za učitavanje, pregled, filtriranje, transformaciju i čišćenje dataset-a. Posebna pažnja posvećena je missing values, numeričkim i kategorijskim podacima, osnovnoj statističkoj analizi i pripremi podataka za Machine Learning. "
+          + "Korišćenjem Matplotlib-a polaznici uče da vizuelno istraže podatke, uoče obrasce, distribucije, odstupanja i odnose između karakteristika. Zatim se uvode train/test skupovi i objašnjava zašto se model ne sme procenjivati na podacima koje je koristio tokom učenja. "
+          + "Kroz završni praktični zadatak ovog modula polaznici dobijaju realan dataset koji samostalno analiziraju, čiste, vizuelizuju i pripremaju za prvi Machine Learning model. Time se postavlja osnova za ceo dalji ML workflow: problem → podaci → priprema podataka → model.",
+        skills: ["AI / ML / Deep Learning koncepti", "Dataset", "Features i Labels", "Training / Validation / Test", "Inference", "Supervised Learning", "Unsupervised Learning", "NumPy", "Pandas", "Data Cleaning", "Missing Values", "Numerički i kategorijski podaci", "Matplotlib", "Data Visualization", "Train / Test Split"]
+      },
+
+      {
+        week: "Nedelje 5-8",
+        title: "Supervised Machine Learning: regresija i klasifikacija",
+        description: "U drugom mesecu polaznici prelaze sa pripreme podataka na izgradnju prvih Machine Learning modela. Najpre se uvodi linearna regresija kako bi polaznici razumeli osnovnu ideju predikcije numeričke vrednosti na osnovu ulaznih karakteristika. Na jednostavnim primerima uče odnos između features i target vrednosti, treniranje modela i korišćenje modela za predikciju novih podataka. "
+          + "Nakon regresije uvodi se klasifikacija i logistic regression, čime polaznici uče kako Machine Learning model može da donosi odluku između više kategorija. Zatim se uvodi k-Nearest Neighbors kako bi se pokazalo da različiti algoritmi koriste različite principe za donošenje predikcija. "
+          + "Decision Trees uvode koncept grananja i odlučivanja na osnovu karakteristika, dok Random Forest pokazuje kako kombinovanje većeg broja stabala može dovesti do robusnijeg modela. Na kraju se uvodi gradient boosting na nivou potrebnom za razumevanje osnovne ideje ensemble metoda. "
+          + "Sav rad realizuje se kroz scikit-learn, pri čemu polaznici uče standardni workflow: priprema X i y podataka, kreiranje modela, treniranje pomoću fit, generisanje predikcija pomoću predict i osnovno poređenje različitih modela. Poseban fokus stavljen je na razliku između regresionih i klasifikacionih problema i na izbor odgovarajućeg algoritma prema konkretnom problemu. "
+          + "Modul se završava nizom praktičnih zadataka, uključujući predviđanje numeričke vrednosti i klasifikaciju događaja, čime polaznik prvi put samostalno prolazi kroz kompletan proces od dataset-a do istreniranog ML modela.",
+        skills: ["Machine Learning Workflow", "scikit-learn", "Linear Regression", "Logistic Regression", "Classification", "k-Nearest Neighbors", "Decision Trees", "Random Forest", "Gradient Boosting", "Model Training", "Model Prediction", "Regression", "Classification"]
+      },
+
+      {
+        week: "Nedelje 9-12",
+        title: "Evaluacija, unapređivanje modela i Unsupervised Learning",
+        description: "U trećem mesecu fokus se pomera sa samog treniranja modela na razumevanje toga koliko model zaista dobro radi i kako njegove performanse mogu da se poboljšaju. Polaznici uče confusion matrix i ključne metrike za klasifikaciju, uključujući accuracy, precision, recall i F1 score, kao i metrike za regresiju kao što su MAE, MSE, RMSE i R². Posebno se obrađuje pitanje zašto visok procenat tačnih predikcija ne mora automatski da znači da je model dobar. "
+          + "Zatim se uvode overfitting i underfitting i objašnjava se kako nastaju problemi sa generalizacijom. Polaznici upoznaju osnovnu intuiciju bias-variance odnosa i uče zašto model mora biti testiran na podacima koje nije koristio tokom treniranja. Uvodi se cross-validation kao pouzdaniji način procene performansi modela. "
+          + "Nakon evaluacije prelazi se na unapređivanje modela kroz preprocessing, feature scaling i feature engineering. Polaznici uče kako se priprema podataka može organizovati zajedno sa modelom korišćenjem scikit-learn Pipeline mehanizma i zašto je sprečavanje data leakage-a ključno za ispravnu procenu modela. "
+          + "U nastavku se uvode hyperparameters, GridSearchCV i RandomizedSearchCV i polaznici uče kako da sistematski porede različite konfiguracije modela. Time se Machine Learning proces proširuje sa prostog treniranja modela na eksperimentisanje, merenje i odabir najboljeg rešenja. "
+          + "U drugom delu modula prelazi se na unsupervised learning. Obrađuju se clustering, K-Means, osnovna ideja PCA i anomaly detection. Polaznici uče kako da otkriju strukture i neuobičajene obrasce čak i kada unapred ne postoji target vrednost. Modul se završava praktičnim projektom koji objedinjuje clustering i detekciju anomalija.",
+        skills: ["Confusion Matrix", "Accuracy", "Precision", "Recall", "F1 Score", "MAE", "MSE", "RMSE", "R²", "Cross-Validation", "Overfitting", "Underfitting", "Feature Scaling", "Feature Engineering", "Pipelines", "Data Leakage", "Hyperparameter Tuning", "GridSearchCV", "RandomizedSearchCV", "K-Means", "Clustering", "PCA", "Anomaly Detection"]
+      },
+
+      {
+        week: "Nedelje 13-16",
+        title: "Neural Networks i Deep Learning sa PyTorch-om",
+        description: "U četvrtom mesecu polaznici prelaze sa klasičnog Machine Learning-a na neuronske mreže i Deep Learning. Pošto su prethodno već naučili šta su podaci, model, trening, loss, evaluacija i overfitting, neuronske mreže se uvode kao prirodan nastavak, a ne kao potpuno nova i izolovana oblast. "
+          + "Najpre se objašnjavaju osnovni elementi neuronske mreže: neuron, weight, bias, layer i activation function. Polaznici uče kako se informacije prosleđuju kroz mrežu i kako kombinovanje više slojeva omogućava modelu da uči složenije obrasce. "
+          + "Zatim se uvodi PyTorch i tensor kao osnovna struktura za numeričke podatke. Polaznici upoznaju forward pass, loss function, gradient, gradient descent i backpropagation i kroz praktične primere uče kako se mreža trenira i kako se njene greške koriste za podešavanje težina. "
+          + "Nakon toga se obrađuju osnovni PyTorch koncepti potrebni za izgradnju sopstvenog trening procesa, uključujući Dataset, DataLoader, model, training loop, optimizer, learning rate, batch size i epoch. Posebno se obrađuju validation i overfitting kako bi se prethodno znanje iz evaluacije direktno povezalo sa Deep Learning-om. "
+          + "U završnom delu modula uvodi se osnovna ideja Convolutional Neural Networks i polaznici razvijaju jednostavan model za klasifikaciju slika. Cilj ovog dela nije ovladavanje velikim i kompleksnim arhitekturama, već razumevanje osnovnog principa Deep Learning-a i sposobnost da se jednostavna neuronska mreža samostalno definiše, trenira, evaluira i koristi za predikciju.",
+        skills: [ "Neural Networks", "Neuron", "Weights", "Bias", "Layers", "Activation Functions", "Tensors", "Forward Pass", "Loss Function", "Gradient Descent", "Backpropagation", "PyTorch", "Dataset", "DataLoader", "Training Loop", "Optimizer", "Learning Rate", "Epoch", "Batch", "MLP", "CNN Fundamentals", "Image Classification"]
+      },
+
+      {
+        week: "Nedelje 17-20",
+        title: "AI aplikacija i završni projekat",
+        description: "U završnom mesecu polaznici objedinjuju znanje iz prethodnih modula kroz razvoj kompletnog AI/ML rešenja. Modul počinje definisanjem realnog problema, cilja sistema i podataka potrebnih za njegovo rešavanje. Polaznici zatim prolaze kompletan workflow koji su tokom kursa postepeno usvajali: analiza podataka, preprocessing, feature engineering, izbor kandidata, treniranje, evaluacija, poređenje modela i izbor finalnog modela. "
+          + "Centralni završni projekat predstavlja razvoj sistema za prediktivno održavanje i detekciju anomalija u industrijskom sistemu. Na osnovu podataka koji simuliraju rad senzora, kao što su temperatura, vibracije, pritisak, brzina i opterećenje, polaznici razvijaju model koji treba da prepozna neuobičajeno ponašanje sistema i proceni mogućnost nastanka problema. "
+          + "U okviru projekta koriste se klasični Machine Learning modeli za klasifikaciju i anomaly detection, dok se jednostavna neuronska mreža uvodi kao dodatni model za poređenje rezultata i povezivanje sa prethodno obrađenim Deep Learning konceptima. Poseban fokus stavljen je na pravilnu evaluaciju i izbor modela na osnovu odgovarajućih metrika, a ne samo na ostvareni procenat tačnosti. "
+          + "Nakon izbora finalnog modela polaznici uče kako da istrenirani model sačuvaju, ponovo učitaju i koriste nad novim podacima bez ponovnog treniranja. Model se zatim integriše u funkcionalnu Python aplikaciju koja prima ulazne podatke, pokreće inference i korisniku prikazuje rezultat predikcije i detektovane anomalije. "
+          + "Rezultat kursa je kompletna portfolio AI aplikacija, a ne samo Jupyter Notebook ili istrenirani model. Završno rešenje demonstrira ceo AI/ML pipeline: od sirovih senzorskih podataka, njihove analize i pripreme, preko treniranja i evaluacije više modela, do izbora finalnog modela, inference procesa i njegove integracije u aplikaciju. Na taj način polaznik završava kurs sa konkretnim projektom koji može samostalno predstaviti kao primer praktične primene Machine Learning-a i Deep Learning-a.",
+        skills: ["AI Problem Definition", "End-to-End ML Pipeline", "Data Preparation", "Feature Engineering", "Model Comparison", "Model Selection", "Predictive Maintenance", "Anomaly Detection", "Classification", "Neural Network Comparison", "Model Persistence", "Inference", "Python AI Application", "Streamlit", "Final AI Project"]
+      }
+    ]
+  },
   { 
     courseId: "csharp-pocetni-nivo", 
     

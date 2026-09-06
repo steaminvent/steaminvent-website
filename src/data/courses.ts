@@ -96,6 +96,24 @@ export const courses: Course[] = [
     image: "/images/python-web-development-api.png",
     featured: false
   },
+  {
+    slug: "ai-machine-learning",
+    title: "AI & Machine Learning",
+    subtitle: "Machine Learning, Deep Learning i razvoj praktičnih AI rešenja",
+    description: "Ovaj kurs predstavlja oblasti posvećene veštačkoj inteligenciji, Machine Learning-u i osnovama Deep Learning-a. Namenjen je polaznicima koji već poseduju dobro predznanje programiranja u Pythonu i žele da nauče kako se od realnog problema, preko podataka i Machine Learning modela, dolazi do funkcionalnog AI rešenja. "
+      + "Polaznici upoznaju osnovne principe veštačke inteligencije, razliku između AI, Machine Learning-a i Deep Learning-a, kao i kompletan tok razvoja ML rešenja: definisanje problema, rad sa podacima, priprema i analiza podataka, izbor modela, treniranje, evaluacija, unapređivanje modela i korišćenje modela za nove predikcije. "
+      + "Kroz praktičan rad sa Pythonom, NumPy, Pandas i Matplotlib bibliotekama polaznici uče kako da pripreme, analiziraju i vizuelizuju podatke, dok kroz scikit-learn razvijaju regresione i klasifikacione modele, primenjuju clustering i anomaly detection i uče kako se modeli pravilno evaluiraju, porede i optimizuju. "
+      + "Poseban deo kursa posvećen je osnovama neuronskih mreža i Deep Learning-a kroz PyTorch. Polaznici uče kako funkcionišu neuroni, slojevi, težine, aktivacione funkcije, loss, gradient descent i backpropagation i razvijaju jednostavne neuronske mreže i osnovni model za klasifikaciju slika. "
+      + "Završni projekat predstavlja kompletno AI/ML rešenje za prediktivno održavanje i detekciju anomalija u industrijskom sistemu. Polaznik od senzorskih podataka samostalno prolazi ceo proces od analize i pripreme podataka, preko treniranja i evaluacije više Machine Learning modela, do izbora finalnog modela i njegove integracije u funkcionalnu Python aplikaciju. "
+      + "Rezultat završnog projekta nije samo istrenirani model ili Jupyter Notebook, već funkcionalna AI aplikacija koja na osnovu ulaznih podataka može da prepozna neuobičajeno ponašanje sistema i proceni mogućnost nastanka problema, uz prikaz rezultata predikcije korisniku. Na taj način polaznik na kraju kursa ima kompletan portfolio projekat koji demonstrira razumevanje podataka, Machine Learning-a, evaluacije modela, anomaly detection-a, osnova Deep Learning-a i integracije AI modela u praktičnu aplikaciju. "
+      + "Kurs predstavlja samostalnu AI/ML oblast u okviru STEAM INVENT obrazovne putanje i priprema polaznike za dalje usavršavanje u oblasti Generative AI, LLM sistema i razvoja savremenih AI aplikacija.",
+    difficulty: "Napredni nivo",
+    duration: "5 meseci (40 časova)",
+    category: "Veštačka inteligencija",
+    technologies: ["Python", "NumPy", "Pandas", "Matplotlib", "scikit-learn", "Machine Learning", "PyTorch", "Neural Networks", "Deep Learning", "Jupyter Notebook", "Streamlit"],
+    image: "/images/course-AI&LM.png",
+    featured: false
+  },
   { 
     slug: "csharp-pocetni-nivo", 
     title: "C#: Početni nivo", 
@@ -223,17 +241,5 @@ export const courses: Course[] = [
     technologies: ["QA", "Manual Testing", "Test Cases", "Bug Tracking"],
     image: "/images/course-qa.png",
     featured: false
-  },
-  {
-    slug: "vestacka-inteligencija-ai-i-razvoj-softvera",
-    title: "Veštačka Inteligencija (AI) & Razvoj",
-    subtitle: "Budućnost softvera kroz neuronske mreže i AI alate",
-    description: "Najtraženija oblast današnjice. Učimo teorijske osnove mašinskog učenja i neuronskih mreža, i kako praktično iskoristiti napredne AI asistente u svakodnevnom pisanju koda i optimizaciji softvera.",
-    difficulty: "Napredni nivo",
-    duration: "4 meseca (32 časa)",
-    category: "Softversko inženjerstvo",
-    technologies: ["AI alati", "Neuronska mreža", "Prompt Eng.", "Machine Learning"],
-    image: "/images/course-ai.png",
-    featured: true
   }
 ];

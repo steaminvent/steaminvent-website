@@ -386,5 +386,29 @@ export const courseCurriculums: CourseCurriculum[] = [
         skills: ["JOIN", "Povezivanje tabela", "Složeni SELECT upiti", "Rad sa više tabela", "Rešavanje problemskih zadataka", "Samostalni rad sa bazom", "Završni projekat"]
       }
     ]
+  },
+  {
+    courseId: "3d-stampa-pocetni-nivo",
+
+    modules: [
+      {
+        week: "Nedelje 1-4",
+        title: "Osnove 3D modelovanja i rad u Tinkercad-u",
+        description: "U prvom mesecu polaznici ulaze u svet trodimenzionalnog dizajna kroz intuitivnu platformu Tinkercad. Uče pravila rada u X, Y i Z osama, manipulaciju osnovnim oblicima, dodavanje rupa, poravnavanje i grupisanje objekata. Kroz praktične vežbe dizajniraju svoje prve funkcionalne predmete (priveske za ključeve, personalizovane stalke ili jednostavne igračke).",
+        skills: ["3D radna površina", "Osnovni oblici", "Grupisanje i sečenje Tinkercad", "Priprema STL fajla"]
+      },
+      {
+        week: "Nedelje 5-8",
+        title: "Uvod u 3D štampu i rad sa Creality Ender štampačem",
+        description: "U drugom delu polaznici se upoznaju sa hardverom 3D štampača Creality Ender i principima FDM tehnologije. Uče kako funkcioniše ekstruder, zagrevanje radne ploče i vođenje filamenta (PLA). Naučiće rad u softveru za pripremu štampe (Slicer) – postavljanje modela, podešavanje debljine sloja, infill-a (ispune) i dodavanje podrški (supports), kao i izvoz G-koda na SD karticu.",
+        skills: ["Creality Ender PLA filament Slicer", "G-kod Kalibracija", "Priprema podloge"]
+      },
+      {
+        week: "Nedelje 9-10",
+        title: "Napredniji dizajnerski izazovi i završni projekat",
+        description: "Polaznici kombinuju sva stečena znanja za izradu složenijeg funkcionalnog objekta iz više delova (npr. kutija sa poklopcem na preklop, zglobna figura ili mehanički sklop). Samostalno pripremaju model, vrše procenu vremena i utroška materijala, pokreću štampu na Creality Ender štampaču i vrše finalnu obradu (uklanjanje podrški i sklapanje).",
+        skills: ["Višedelna štampa modela", "Sklapanje modela", "Završni 3D projekat"]
+      }
+    ]
   }
 ];

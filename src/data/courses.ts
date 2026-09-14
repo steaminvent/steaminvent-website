@@ -219,15 +219,17 @@ export const courses: Course[] = [
     featured: false
   },
   {
-    slug: "prakticna-elektronika-i-3d-stampa",
-    title: "Elektronika & 3D Štampa",
-    subtitle: "Od električnih šema do opipljivih fizičkih uređaja",
-    description: "Upoznajte bazične elektronske komponente, naučite bezbedno lemljenje i korišćenje multimetra. Paralelno savladavamo osnove 3D modelovanja i rad sa 3D štampačima.",
-    difficulty: "Srednji nivo",
-    duration: "3 meseca (24 časa)",
-    category: "Elektronika & IoT",
-    technologies: ["Lemljenje", "Multimetar", "3D Modelovanje", "3D Štampa"],
-    image: "/images/course-electronics.png",
+    slug: "3d-stampa-pocetni-nivo",
+    title: "3D Štampa",
+    subtitle: "3D modelovanje, dizajn i 3D štampa",
+    description: "Program je osmišljen kao praktičan uvod u svet 3D modelovanja, digitalnog dizajna i 3D štampanja za početnike. "
+                + "U prvom delu kursa fokus je na osnovama 3D prostora, kreiranju i spajanju geometrijskih tela u online alatu Tinkercad, gde polaznici uče kako da ideju sa papira pretvore u trodimenzionalni digitalni model. "
+                + "U drugom delu kursa prelaze na rad sa 3D štampačem Creality Ender i softverom za pripremu štampe (Slicer), gde savladavaju podešavanje parametara, pripremu modela i sam proces izrade fizičkih predmeta koje samostalno dizajniraju i zadržavaju.",
+    difficulty: "Početni nivo",
+    duration: "3 meseca (20 časova)",
+    category: "3D modelovanje i štampa",
+    technologies: ["3D modelovanje", "Digitnalni dizajn", "3D Štampa", "Tinkercad", "Creality Ender"],
+    image: "/images/course-3D-print.png",
     featured: false
   },
   {

@@ -20,32 +20,32 @@ const latestActivities = [...activities]
 const offerItems = [
   {
     title: "STEAM kursevi",
-    description: "Za decu, mlade i odrasle.",
+    description: "Za decu, mlade i odrasle",
     image: "/images/offer-steam-kursevi.png",
   },
   {
     title: "Dopunska nastava",
-    description: "Podrška učenicima u savladavanju gradiva.",
+    description: "Podrška učenicima u savladavanju gradiva",
     image: "/images/offer-dopunska-nastava.png",
   },
   {
     title: "Radionice",
-    description: "Praktične radionice i kreativne aktivnosti.",
+    description: "Praktične radionice i kreativne aktivnosti",
     image: "/images/offer-radionice.png",
   },
   {
     title: "Projekti",
-    description: "Razvoj ideja kroz projekte i inovativna rešenja.",
+    description: "Razvoj ideja kroz projekte i inovativna rešenja",
     image: "/images/offer-projekti.png",
   },
   {
     title: "Takmičenja",
-    description: "Priprema za takmičenja.",
+    description: "Priprema za takmičenja",
     image: "/images/offer-takmicenja.png",
   },
   {
     title: "Saradnja sa kompanijama",
-    description: "Obuke i treninzi po meri industrije.",
+    description: "Obuke i treninzi po meri industrije",
     image: "/images/offer-saradnja.png",
   },
 ];
@@ -354,83 +354,33 @@ const offerItems = [
     </div>
   </section>
 
-  <!-- KATEGORIJA A: GLAVNI TEHNOLOŠKI STUBOVI (EDUKACIJA) -->
-  <section class="pt-24 pb-12 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-          Kako razvijamo kreativnost i logiku?
-        </h2>
-        <p class="mt-4 text-lg text-slate-600">
-          Naš program je pažljivo struktuiran tako da polaznike uvede u svet visoke tehnologije kroz igru, saradnju i rešavanje realnih inženjerskih izazova.
-        </p>
-      </div>
+  <!-- STEAM INVENT DRVO -->
+<section class="relative overflow-hidden bg-white py-12 sm:py-16 md:py-20 lg:py-24">
 
-      <div class="flex flex-wrap justify-center gap-8 w-full">
-        
-        <!-- PRVI RED: 3 VELIKE DOMINANTNE KARTICE -->
-        <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] flex">
-          <FeatureCard 
-            title="Nauka"
-            description="Kroz praktične primere razvija se radoznalost i kritičko mišljenje. Polaznici uče da samostalno formulišu pitanja, testiraju svoje ideje u praksi i donose zaključke na osnovu realnih dokaza."
-            iconPath="/images/science.png"
-            badgeText="Naučni metod"
-          />
-        </div>
+  <div
+    class="pointer-events-none absolute left-1/2 top-1/2 h-[80%] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-violet-500/10 via-cyan-400/10 to-violet-500/10 blur-3xl"
+    aria-hidden="true"
+  ></div>
 
-        <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] flex">
-          <FeatureCard 
-            title="Tehnologija"
-            description="Kombinovana primena hardvera, softvera i pametnih sistema. Polaznici istražuju svet mikroelektronike, interneta stvari (IoT) i arhitekture sistema, učeći kako da povežu digitalni svet sa fizičkim okruženjem."
-            iconPath="/images/technology.png"
-            badgeText="Digitalna pismenost"
-          />
-        </div>
+  <div class="relative mx-auto w-full max-w-7xl px-3 sm:px-6 lg:px-8">
 
-        <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] flex">
-          <FeatureCard 
-            title="Inženjering"
-            description="Spajanje ideje, koda i fizičkog sveta. Kroz praktične projekte savladavaju se principi mehanike, elektronike i robotike, gde se uči kako se apstraktna ideja pretvara u funkcionalan sistem."
-            iconPath="/images/engineering.png"
-            badgeText="Sistemsko razmišljanje"
-          />
-        </div>
+    <div class="mx-auto w-full max-w-[1100px]">
 
-        <!-- DRUGI RED: 2 CENTRIRANE KARTICE -->
-        <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] flex">
-          <FeatureCard 
-            title="Umetnost"
-            description="Spajanje estetike i tehnike. Kroz elemente vizuelnog i digitalnog dizajna polaznici razvijaju kreativnost i uče kako da tehničkim projektima daju prepoznatljiv, funkcionalan i privlačan oblik."
-            iconPath="/images/arts.png"
-            badgeText="Kreativnost i dizajn"
-          />
-        </div>
-
-        <div class="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] flex">
-          <FeatureCard 
-            title="Matematika"
-            description="Primenjena logika u službi rešavanja realnih problema. Umesto apstraktne teorije, matematika postaje praktičan alat kojim se definišu algoritmi, optimizuju procesi i donose tačni proračuni."
-            iconPath="/images/math.png"
-            badgeText="Primenjena logika"
-          />
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- NOVA SEKCIJA: STEAM DRVO (Između Kategorije A i B) -->
-  <section class="py-16 md:py-24 bg-white flex justify-center items-center overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 text-center w-full">
-      <img 
-        src="/images/steam-drvo.svg" 
-        alt="STEAM INVENT Drvo znanja" 
-        class="w-full max-w-5xl lg:max-w-6xl h-auto mx-auto drop-shadow-xl hover:scale-[1.02] transition-all duration-500"
+      <img
+        src="/images/steam-drvo-home.png"
+        alt="STEAM INVENT — Drvo znanja"
+        width="1536"
+        height="1536"
+        loading="lazy"
+        decoding="async"
+        class="mx-auto block h-auto w-full object-contain drop-shadow-[0_20px_45px_rgba(32,51,105,0.18)] transition-transform duration-500 hover:scale-[1.01]"
       />
+
     </div>
-  </section>
+
+  </div>
+
+</section>
 
   <!-- KATEGORIJA B: SEKCIJA ZA AKTIVNOSTI I INICIJATIVE UDRUŽENJA -->
   <section class="py-24 bg-slate-300/80 text-slate-900 sm:rounded-3xl sm:mx-4 my-8 border-y sm:border border-slate-400/40 shadow-inner">

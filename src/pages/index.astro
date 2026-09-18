@@ -2,6 +2,7 @@
 // src/pages/index.astro
 import MainLayout from '../layouts/MainLayout.astro';
 import FeatureCard from '../components/FeatureCard.astro';
+import { courses } from '../data/courses';
 import { initiatives } from '../data/initiatives';
 import { activities } from '../data/activities';
 import ActivityCard from '../components/ActivityCard.astro';
@@ -15,6 +16,18 @@ const iotIcon = "M12 2a10 10 0 1 0 10 10H12V2z";
 const latestActivities = [...activities]
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
   .slice(0, 3);
+
+const showcaseCourseSlugs = [
+  "python-pocetni-nivo",
+  "csharp-pocetni-nivo",
+  "arduino-robotika-i-iot",
+  "3d-stampa-pocetni-nivo",
+  "ai-machine-learning",
+];
+
+const showcaseCourses = showcaseCourseSlugs
+  .map((slug) => courses.find((course) => course.slug === slug))
+  .filter((course): course is (typeof courses)[number] => Boolean(course));
 
 // Ponuda udruženja
 const offerItems = [
@@ -382,71 +395,253 @@ const offerItems = [
 
 </section>
 
-  <!-- KATEGORIJA B: SEKCIJA ZA AKTIVNOSTI I INICIJATIVE UDRUŽENJA -->
-  <section class="py-24 bg-slate-300/80 text-slate-900 sm:rounded-3xl sm:mx-4 my-8 border-y sm:border border-slate-400/40 shadow-inner">
-    <div class="max-w-6xl mx-auto px-4 sm:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="inline-block text-indigo-800 text-xs font-bold uppercase tracking-wider bg-white px-3 py-1 rounded-full shadow-sm">
-          Širi društveni uticaj
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight mt-3">
-          Inicijative i društvene aktivnosti
-        </h2>
-        <p class="mt-4 text-slate-800 text-lg font-medium">
-          Kao udruženje građana, naš cilj je da aktivno radimo na razvoju lokalne zajednice, podršci mladim talentima i digitalizaciji privrede.
-        </p>
-      </div>
+<!-- NAŠI PROGRAMI -->
+<section class="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24">
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {initiatives.map((item) => (
-          <div class="bg-white border border-slate-200/60 p-8 rounded-2xl flex flex-col justify-between hover:border-indigo-500/50 hover:shadow-lg transition-all duration-300 shadow-md">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-6 shadow-sm">
-                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d={item.iconPath}></path>
-                </svg>
-              </div>
-              
-              <h3 class="text-xl font-bold text-slate-950 mb-3">
-                {item.title}
-              </h3>
-              <p class="text-slate-700 text-sm leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
+  <div
+    class="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-violet-200/25 blur-3xl"
+    aria-hidden="true"
+  ></div>
 
-    </div>
-  </section>
+  <div
+    class="pointer-events-none absolute -right-32 bottom-10 h-80 w-80 rounded-full bg-cyan-200/20 blur-3xl"
+    aria-hidden="true"
+  ></div>
 
-  <!-- SEKCIJA: AKTUELNOSTI -->
-  <section class="py-20 bg-white border-t border-slate-100">
-    <div class="max-w-5xl mx-auto px-4">
-      
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
-        <div class="text-left">
-          <h2 class="text-3xl font-black text-slate-900 tracking-tight">Aktuelnosti udruženja</h2>
-          <p class="text-slate-500 mt-2 max-w-xl">Predstavljamo vam sve novosti kod nas, kako izgledaju naše radionice i rezultate koje postižemo zajedno sa našim članovima.</p>
-        </div>
-        
-        <a 
-          href="/activities" 
-          class="inline-flex items-center justify-center font-bold text-sm text-indigo-600 bg-indigo-50 hover:bg-indigo-100/80 px-5 py-2.5 rounded-xl transition-colors whitespace-nowrap"
+  <div class="relative mx-auto max-w-[1450px] px-5 sm:px-8 lg:px-10">
+
+    <div
+      class="grid gap-10 lg:grid-cols-[0.65fr_2.35fr] lg:items-center xl:gap-14"
+    >
+
+      <div class="text-center lg:text-left">
+        <p
+          class="text-xs font-bold uppercase tracking-[0.18em] text-violet-700"
         >
-          Pogledaj sve aktivnosti
+          Naši programi
+        </p>
+
+        <h2
+          class="mt-3 text-3xl font-black tracking-tight text-[#09224a] sm:text-4xl"
+        >
+          Nauči.
+          <br class="hidden lg:block" />
+          Primeni.
+          <br class="hidden lg:block" />
+          <span
+            class="bg-gradient-to-r from-violet-700 via-purple-700 to-indigo-600 bg-clip-text text-transparent"
+          >
+            Napravi.
+          </span>
+        </h2>
+
+        <p
+          class="mx-auto mt-5 max-w-md text-sm leading-6 text-slate-600 sm:text-base sm:leading-7 lg:mx-0"
+        >
+          Od programiranja i robotike, preko 3D modelovanja i veštačke
+          inteligencije, do elektronike i mnogih drugih oblasti. Naši
+          programi su praktični, moderni i prilagođeni različitim
+          uzrastima i nivoima znanja.
+        </p>
+
+        <a
+          href="/courses"
+          class="mt-7 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-700 to-indigo-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-violet-900/20 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+        >
+          Pogledaj sve programe
+          <span aria-hidden="true" class="text-lg leading-none">→</span>
         </a>
       </div>
 
-      <!-- Dinamička mreža kartica -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {latestActivities.map((activity) => (
-          <ActivityCard activity={activity} />
-        ))}
-      </div>
+      <div
+        class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
+      >
 
+        {showcaseCourses.map((course) => (
+          <a
+            href={`/courses/${course.slug}`}
+            class="group flex min-h-[300px] flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-violet-200 hover:shadow-xl"
+          >
+
+            <div class="relative aspect-[1.35/1] overflow-hidden bg-slate-100">
+              <img
+                src={course.image}
+                alt={course.title}
+                width="900"
+                height="780"
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+
+              <div
+                class="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-slate-950/45 to-transparent"
+                aria-hidden="true"
+              ></div>
+
+              <span
+                class="absolute bottom-3 left-3 rounded-full bg-white/95 px-3 py-1 text-[10px] font-bold text-violet-700 shadow-sm"
+              >
+                {course.difficulty}
+              </span>
+            </div>
+
+            <div class="flex flex-1 flex-col p-5">
+
+              <h3
+                class="text-base font-black leading-tight text-[#09224a] sm:text-[17px]"
+              >
+                {course.title}
+              </h3>
+
+              <div class="mt-auto flex items-center justify-end pt-6">
+
+                <span
+                  class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-50 text-lg font-semibold text-indigo-600 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-indigo-600 group-hover:text-white"
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+
+              </div>
+            </div>
+
+          </a>
+        ))}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- AKTIVNOSTI -->
+  <section class="relative overflow-hidden bg-[#fbfcff] py-16 sm:py-20 lg:py-24">
+
+    <div
+      class="pointer-events-none absolute -left-24 bottom-10 h-72 w-72 rounded-full bg-cyan-200/15 blur-3xl"
+      aria-hidden="true"
+    ></div>
+
+    <div
+      class="pointer-events-none absolute -right-24 top-10 h-80 w-80 rounded-full bg-violet-200/20 blur-3xl"
+      aria-hidden="true"
+    ></div>
+
+    <div class="relative mx-auto max-w-[1450px] px-5 sm:px-8 lg:px-10">
+
+      <div
+        class="grid gap-10 lg:grid-cols-[0.65fr_2.35fr] lg:items-center xl:gap-14"
+      >
+
+        <div class="text-center lg:text-left">
+
+          <p
+            class="text-xs font-bold uppercase tracking-[0.18em] text-violet-700"
+          >
+            Aktivnosti
+          </p>
+
+          <h2
+            class="mt-3 text-3xl font-black tracking-tight text-[#09224a] sm:text-4xl"
+          >
+            Šta je novo u STEAM INVENT-u?
+          </h2>
+
+          <p
+            class="mx-auto mt-5 max-w-md text-sm leading-6 text-slate-600 sm:text-base sm:leading-7 lg:mx-0"
+          >
+            Pratite naše radionice, događaje, projekte i uspehe naših
+            polaznika i članova udruženja.
+          </p>
+
+          <a
+            href="/activities"
+            class="mt-7 inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-700 to-indigo-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-violet-900/20 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-xl"
+          >
+            Pogledaj sve aktivnosti
+            <span aria-hidden="true" class="text-lg leading-none">→</span>
+          </a>
+
+        </div>
+
+
+        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
+
+          {latestActivities.map((activity) => {
+            const formattedDate = new Date(activity.date).toLocaleDateString(
+              "sr-RS",
+              {
+                day: "numeric",
+                month: "long",
+                year: "numeric",
+              }
+            );
+
+            return (
+              <article
+                class="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-violet-200 hover:shadow-xl"
+              >
+
+                <a
+                  href={`/activities/${activity.slug}`}
+                  class="block"
+                >
+
+                  <div class="relative aspect-video overflow-hidden bg-slate-100">
+                    <img
+                      src={activity.image}
+                      alt={activity.title}
+                      width="900"
+                      height="506"
+                      loading="lazy"
+                      decoding="async"
+                      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+
+                    <span
+                      class="absolute left-4 top-4 rounded-md border border-white/70 bg-white/95 px-2.5 py-1 text-[10px] font-bold text-indigo-700 shadow-sm"
+                    >
+                      {formattedDate}
+                    </span>
+
+                  </div>
+
+                  <div class="flex min-h-[160px] flex-col p-5">
+
+                    <p
+                      class="text-[10px] font-bold uppercase tracking-[0.14em] text-violet-700"
+                    >
+                      {activity.category}
+                    </p>
+
+                    <h3
+                      class="mt-2 text-base font-black leading-snug text-[#09224a] transition-colors duration-200 group-hover:text-indigo-600"
+                    >
+                      {activity.title}
+                    </h3>
+
+                    <div class="mt-auto flex justify-end pt-6">
+
+                      <span
+                        class="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-50 text-lg font-semibold text-indigo-600 transition-all duration-300 group-hover:translate-x-1 group-hover:bg-indigo-600 group-hover:text-white"
+                        aria-hidden="true"
+                      >
+                        →
+                      </span>
+
+                    </div>
+
+                  </div>
+
+                </a>
+
+              </article>
+            );
+          })}
+
+        </div>
+      </div>
     </div>
   </section>
 

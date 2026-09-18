@@ -16,7 +16,7 @@ export const activities: Activity[] = [
     title: 'Otvorene prijave za prijem novih članova i jesenji ciklus radionica',
     excerpt: 'STEAM INVENT zvanično poziva sve zainteresovane da se priključe udruženju i obezbede mesto u novom ciklusu praktičnih radionica koje startuju u oktobru mesecu. ',
     content: 'Sa ponosom najavljujemo otvaranje prijava za novi ciklus radionica! Zbog rada u malim mentorskim grupama i rada na namenskoj opremi, broj mesta po grupama je ograničen. Sve naše radionice i detalje programa možete pronaći na stranici Programi našeg sajta kao i na zvaničnim stranicma društvenih mreža. Ili nas kontaktirati putem telefona i email-a. Ili jednostavno prošetati do našeg sedišta na adresi Kralja Petra I 5/12 u Sremskoj Mitrovici.',
-    date: '2026-09-04',
+    date: '2026-09-17',
     category: 'Obaveštenje',
     image: '/images/robotics-workshop.png',
     slug: 'otvorene-prijave-za-prijem-novih-clanova'

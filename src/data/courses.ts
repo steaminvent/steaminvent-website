@@ -31,23 +31,24 @@ export const courses: Course[] = [
     title: "STEAM Igračke & Robotika za Najmlađe",
     subtitle: "Razvoj tehničkih veština kroz STEM igračke i robote za najmlađe",
     description: "Program je osmišljen kao praktičan uvod u svet inženjerstva, elektronike i robotike za decu. U prvom delu kursa fokus je na mehanici, električnim kolima i solarnoj energiji, gde deca od drvenih i plastičnih delova samostalno sklapaju funkcionalne igračke koje zadržavaju. "
-    + "U drugom delu kursa prelaze na naprednije edukativne robote sa motorima i senzorima, gde uče osnove logike i blokovskog programiranja kako bi oživeli svoje konstrukcije.",
+                + "U drugom delu kursa prelaze na naprednije edukativne robote sa motorima i senzorima, gde uče osnove logike i blokovskog programiranja kako bi oživeli svoje konstrukcije.",
     difficulty: "Početni nivo",
     duration: "3 meseca (20 časova)",
-    category: "Vizuelno programiranje",
+    category: "Elektronika & Programiranje",
     technologies: ["Robotika", "Scratch", "Blockly"],
     image: "/images/course-lego.png",
     featured: true
   },
   {
-    slug: "arduino-robotika-i-iot",
-    title: "Arduino Robotika & Pametni IoT Sistemi",
-    subtitle: "Programiranje mikrokontrolera i kreiranje pametnih uređaja",
-    description: "Ulazak u svet Interneta Stvari (IoT). Naučite kako da programirate Arduino i ESP32, povežete senzore koji čitaju podatke iz okruženja, upravljate aktuatorima i bežično šaljete informacije putem interneta.",
+    slug: "arduino-robotika-smart-home",
+    title: "Arduino Robotika & Smart Home",
+    subtitle: "Programiranje mikrokontrolera",
+    description: "Program je osmišljen kao srednji nivo edukacije iz primenjene elektronike, mikrokontrolera i robotike za decu. " 
+                + "Fokus je na premeštanju sa bazičnog Scratch/Blockly okruženja na naprednije blokovsko programiranje prilagođeno Arduino mikrokontrolerima (mBlock / PictoBlox / Arduino IDE sa blokovima), uz prelazak na izradu realnih praktičnih projekata: autonomnih pametnih vozila (Arduino autić) i modela pametnih kuća (Smart Home).",
     difficulty: "Srednji nivo",
-    duration: "4 meseca (32 časa)",
-    category: "Elektronika & IoT",
-    technologies: ["Arduino", "C++", "ESP32", "Senzori & Aktuatori"],
+    duration: "3 meseca (20 časova)",
+    category: "Elektronika & Programiranje",
+    technologies: ["Arduino", "C++", "Senzori & Aktuatori", "mBlock"],
     image: "/images/course-arduino.png",
     featured: true
   },

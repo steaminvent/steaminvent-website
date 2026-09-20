@@ -43,7 +43,7 @@ export const courseCurriculums: CourseCurriculum[] = [
         week: "Nedelje 1-4",
         title: "Osnove mehanike i elektronike",
         description: "U prvom mesecu polaznici ulaze u svet mehanike i elektronike kroz praktično sklapanje STEM igračaka. Uče kako funkcionišu zupčanici, kako se zatvara električno kolo i kako solarni paneli pretvaraju svetlost u pokret. Svaku igračku koju naprave u ovom delu kursa deca zadržavaju i nose kući kao poklon.",
-        skills: [" DC motori", "Solarni paneli", "Zupčanici", "Strujna kola", "STEAM igračke"]
+        skills: ["DC motori", "Solarni paneli", "Zupčanici", "Strujna kola", "STEAM igračke"]
       },
       {
         week: "Nedelje 5-8",
@@ -56,6 +56,29 @@ export const courseCurriculums: CourseCurriculum[] = [
         title: "Složene robotske konstrukcije i završni projekat",
         description: "Polaznici objedinjuju sva stečena znanja iz mehanike, elektronike i programiranja. Kroz timski rad sklapaju složenije robote (sa sistemima poluga, sajli ili više pokretnih delova) i programiraju ih za rešavanje konkretnih praktičnih zadataka.",
         skills: ["Multisenzorska logika", "Ispitivanje i poligon zadaci", "Timski rad"]
+      }
+    ]
+  },
+  {
+    courseId: "arduino-robotika-smart-home",
+    modules: [
+      {
+        week: "Nedelje 1-4",
+        title: "Osnove Arduino ekosistema i pametne kuće (Smart Home)",
+        description: "U prvom delu polaznici se upoznaju sa mikrokontrolerom Arduino UNO, osnova ugradnih sistema, digitalnim i analognim ulazima/izlazima. Grade prvi modul makete pametne kuće.",
+        skills: ["Arduino UNO", "Solarni paneli", "mBlock / PictoBlox"]
+      },
+      {
+        week: "Nedelje 5-8",
+        title: "Napredni pametni kućni sistemi i mehatronika",
+        description: "Polaznici nadograđuju maketu pametne kuće izvršnim mehanizmima i daljinskim upravljanjem.",
+        skills: ["Servo motori", "Releji", "IR senzor pokreta", "Bluetooth modul", "Smart App"]
+      },
+      {
+        week: "Nedelje 9-10",
+        title: "Konstrukcija i programiranje pametnog vozila (Arduino autić)",
+        description: "Drugi veliki projekat — sklapanje mehaničke šasije robota-autića, povezivanje pogonskih motora i učenje principa PWM upravljanja brzinskim i smernim kretanjem.",
+        skills: ["2WD/4WD šasija", "DC motori", "Driver", "PWM kontrola", "Eksterni izvori napajanja"]
       }
     ]
   },

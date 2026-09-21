@@ -13,8 +13,21 @@ const {
   description = "Udruženje građana iz Sremske Mitrovice posvećeno razvoju digitalnih veština, robotike i hardverske automatizacije kod dece i mladih.",
 } = Astro.props;
 
-// Čitamo trenutnu putanju iz URL-a (npr. "/" ili "/courses")
-const pathname = new URL(Astro.request.url).pathname;
+// Čitamo trenutnu putanju stranice
+const pathname = Astro.url.pathname;
+
+// Canonical URL bez query parametara i sa završnim slash-om
+const canonicalPath =
+  pathname === "/"
+    ? "/"
+    : pathname.endsWith("/")
+      ? pathname
+      : `${pathname}/`;
+
+const canonicalURL = `https://steaminvent.org${canonicalPath}`;
+
+// Podrazumevana slika za deljenje na društvenim mrežama
+const socialImage = "https://steaminvent.org/images/hero-background.png";
 ---
 
 <!doctype html>
@@ -22,16 +35,91 @@ const pathname = new URL(Astro.request.url).pathname;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- NOVA IKONICA: Pokazuje na /public/logo.png -->
+
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="/images/logo.png" />
-    
+
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Primarni SEO tagovi -->
+    <!-- ========================================= -->
+    <!-- PRIMARY SEO -->
+    <!-- ========================================= -->
+
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- ========================================= -->
+    <!-- OPEN GRAPH / FACEBOOK / SOCIAL SHARING -->
+    <!-- ========================================= -->
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="STEAM INVENT" />
+    <meta property="og:locale" content="sr_RS" />
+
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:secure_url" content={socialImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta
+      property="og:image:alt"
+      content="STEAM INVENT - Udruženje za promociju STEAM disciplina i inovacija"
+    />
+
+    <!-- ========================================= -->
+    <!-- TWITTER / X -->
+    <!-- ========================================= -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:image" content={socialImage} />
+    <meta
+      name="twitter:image:alt"
+      content="STEAM INVENT - Udruženje za promociju STEAM disciplina i inovacija"
+    />
+
+    <!-- ========================================= -->
+    <!-- ORGANIZATION STRUCTURED DATA / JSON-LD -->
+    <!-- ========================================= -->
+
+    {pathname === "/" && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "@id": "https://steaminvent.org/#organization",
+          "name": "STEAM INVENT",
+          "legalName": "Udruženje za promociju STEAM disciplina i inovacija \"STEAM INVENT\"",
+          "url": "https://steaminvent.org/",
+          "logo": "https://steaminvent.org/images/logo.png",
+          "description": "Udruženje za promociju STEAM disciplina i inovacija koje kroz obrazovne programe, radionice i projekte povezuje nauku, tehnologiju, inženjerstvo, umetnost i matematiku.",
+          "email": "info@steaminvent.org",
+          "telephone": [
+            "+381677427415",
+            "+381643686692"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kralja Petra I 5/12",
+            "addressLocality": "Sremska Mitrovica",
+            "addressCountry": "RS"
+          },
+          "sameAs": [
+            "https://www.facebook.com/steaminvent.sm/",
+            "https://www.instagram.com/steaminvent.sm/"
+          ],
+          "taxID": "115913747"
+        })}
+      />
+    )}
   </head>
 
   <body
@@ -50,10 +138,10 @@ const pathname = new URL(Astro.request.url).pathname;
           class="flex items-center gap-3 text-2xl font-black tracking-wider text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md group z-50"
         >
           <!-- NOVI LOGO: PNG slika umesto SVG koda -->
-          <img 
-            src="/images/logo.png" 
-            alt="STEAM INVENT Logo" 
-            class="w-12 h-12 object-contain group-hover:scale-105 transition-transform duration-300" 
+          <img
+            src="/images/logo.png"
+            alt="STEAM INVENT Logo"
+            class="w-12 h-12 object-contain group-hover:scale-105 transition-transform duration-300"
           />
 
           <span
@@ -83,7 +171,7 @@ const pathname = new URL(Astro.request.url).pathname;
             Programi
           </a>
 
-          <a 
+          <a
             href="/activities"
             class={pathname.startsWith("/activities")
               ? "text-indigo-600"
@@ -134,8 +222,8 @@ const pathname = new URL(Astro.request.url).pathname;
         </nav>
 
         <!-- DUGME: HAMBURGER TRI CRTICE -->
-        <button 
-          id="menu-btn" 
+        <button
+          id="menu-btn"
           class="block md:hidden p-2 text-slate-600 hover:text-indigo-600 focus:outline-none z-50"
           aria-label="Meni"
         >
@@ -154,13 +242,12 @@ const pathname = new URL(Astro.request.url).pathname;
             />
           </svg>
         </button>
-
       </div>
     </header>
 
     <!-- PANEL ZA MOBILNI MENI -->
-    <div 
-      id="steaminvent-mobilni-meni" 
+    <div
+      id="steaminvent-mobilni-meni"
       style="display: none; background-color: #ffffff; flex-direction: column;"
       class="fixed inset-0 z-[100] pt-28 px-6 space-y-5 md:hidden"
     >
@@ -178,7 +265,7 @@ const pathname = new URL(Astro.request.url).pathname;
         Programi
       </a>
 
-      <a 
+      <a
         href="/activities"
         class={`mobile-link text-xl font-bold py-3 border-b border-slate-100 ${pathname.startsWith("/activities") ? "text-indigo-600" : "text-slate-700"}`}
       >

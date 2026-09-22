@@ -85,6 +85,7 @@ const currentYear = new Date().getFullYear();
         <!-- KOLONA 4: INTERAKTIVNA MAPA -->
         <div class="space-y-4 text-left">
             <h3 class="text-xs font-bold uppercase tracking-wider text-white">Gde se nalazimo</h3>
+
             <div class="relative w-full h-40 rounded-xl overflow-hidden border border-slate-800 shadow-inner bg-slate-950 group/map">
                 <!-- Lebdeći bedž -->
                 <div class="absolute top-2.5 left-2.5 z-10 bg-slate-900/90 backdrop-blur-sm border border-slate-700/50 px-2.5 py-1 rounded-lg flex items-center gap-1.5 shadow-lg pointer-events-none group-hover/map:border-indigo-500/50 transition-colors duration-300">
@@ -92,14 +93,14 @@ const currentYear = new Date().getFullYear();
                     <span class="text-[10px] font-bold text-white tracking-wide">STEAM INVENT</span>
                 </div>
 
-                <!-- Google Maps Embed -->
+                <!-- Google Maps Embed – verifikovani lokal -->
                 <iframe
-                    src="https://maps.google.com/maps?q=44.9694269,19.6067545&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+                    src="https://maps.google.com/maps?q=STEAM+INVENT,+Sremska+Mitrovica&t=&z=17&ie=UTF8&iwloc=B&output=embed"
                     class="w-full h-full border-0 grayscale opacity-75 contrast-125 group-hover/map:opacity-100 group-hover/map:grayscale-0 transition-all duration-300"
                     allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+                </iframe>
             </div>
         </div>
 

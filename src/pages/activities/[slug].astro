@@ -1,4 +1,5 @@
 ---
+// src/pages/activities/[slug].astro
 import MainLayout from '../../layouts/MainLayout.astro';
 import { activities } from '../../data/activities';
 
@@ -10,87 +11,101 @@ export async function getStaticPaths() {
 }
 
 const { activity } = Astro.props;
+const { slug } = Astro.params;
 
-// Formatiranje datuma za prikaz u zaglavlju
-const formattedDate = new Date(activity.date).toLocaleDateString('sr-RS', {
+const currentSlug = (slug || '').trim().toLowerCase();
+
+const currentActivity = activities.find(
+  (item) => item.slug.trim().toLowerCase() === currentSlug
+);
+
+if (!currentActivity) {
+  throw new Error(`Aktivnost nije pronađena: ${currentSlug}`);
+}
+
+const formattedDate = new Date(currentActivity.date).toLocaleDateString('sr-RS', {
   day: 'numeric',
   month: 'long',
   year: 'numeric'
 });
-
-// Boje za bedž u zavisnosti od kategorije
-const categoryColors: Record<string, string> = {
-  'Radionica': 'bg-emerald-600 text-white',
-  'Takmičenje': 'bg-amber-600 text-white',
-  'Obaveštenje': 'bg-blue-600 text-white',
-  'Inicijativa': 'bg-purple-600 text-white'
-};
-
-const badgeClass = categoryColors[activity.category] || 'bg-slate-700 text-white';
 ---
 
-<MainLayout 
-  title={activity.seoTitle ?? `${activity.title} | STEAM INVENT`} 
-  description={activity.excerpt}
+<MainLayout
+  title={currentActivity.seoTitle ?? `${currentActivity.title} | STEAM INVENT`}
+  description={currentActivity.excerpt}
 >
-  
-  <!-- ZAGLAVLJE VESTI -->
-  <header class="py-12 bg-slate-900 text-white relative overflow-hidden">
+  <!-- ZAGLAVLJE AKTIVNOSTI -->
+  <section class="relative py-16 lg:py-24 bg-slate-900 text-white overflow-hidden">
     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#312e81_1px,transparent_1px)] [background-size:16px_16px]"></div>
-    
-    <div class="max-w-3xl mx-auto px-4 relative z-10 text-left">
-      <div class="flex items-center gap-3 mb-4">
-        <span class={`text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wider ${badgeClass}`}>
-          {activity.category}
+
+    <div class="max-w-5xl mx-auto px-4 relative z-10">
+      <div class="flex flex-wrap items-center gap-3 mb-4">
+        <span class="bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          {currentActivity.category}
         </span>
-        <time class="text-xs font-medium text-slate-400">
+
+        <span class="bg-slate-800 text-slate-300 text-xs font-medium px-3 py-1 rounded-full border border-slate-700">
           {formattedDate}
-        </time>
+        </span>
       </div>
 
-      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight leading-tight">
-        {activity.title}
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight max-w-4xl">
+        {currentActivity.title}
       </h1>
+
+      <p class="mt-4 text-lg sm:text-xl text-slate-300 max-w-3xl font-normal leading-relaxed">
+        {currentActivity.excerpt}
+      </p>
     </div>
-  </header>
+  </section>
 
-  <!-- SADRŽAJ VESTI -->
-  <article class="py-16 bg-slate-50 min-h-[60vh]">
-    <div class="max-w-3xl mx-auto px-4">
-      
-      <!-- Slika vesti -->
-      <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-video w-full mb-10">
-        <img 
-          src={activity.image} 
-          alt={activity.title} 
-          class="w-full h-full object-cover"
-        />
-      </div>
+  <!-- GLAVNI SADRŽAJ -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="max-w-4xl mx-auto space-y-8">
 
-      <!-- Tekstualni sadržaj -->
-      <div class="bg-white rounded-2xl p-8 sm:p-12 border border-slate-200 shadow-sm text-left">
-        <p class="text-slate-900 text-lg font-semibold leading-relaxed mb-6 border-l-4 border-indigo-600 pl-4">
-          {activity.excerpt}
-        </p>
-        
-        <div class="text-slate-700 text-base leading-relaxed space-y-4 whitespace-pre-line">
-          {activity.content}
+        <!-- Velika slika -->
+        <div class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm aspect-video w-full">
+          <img
+            src={currentActivity.image}
+            alt={currentActivity.title}
+            class="w-full h-full object-cover"
+          />
         </div>
 
-        <div class="mt-12 pt-8 border-t border-slate-100 flex justify-start">
-          <a 
-            href="/activities" 
-            class="inline-flex items-center text-sm font-bold text-slate-600 hover:text-indigo-600 gap-2 transition-colors group"
+        <!-- Sadržaj aktivnosti -->
+        <article class="bg-white rounded-2xl p-8 lg:p-10 border border-slate-200 shadow-sm">
+          <div class="prose prose-slate max-w-none">
+            <p class="text-slate-600 text-base lg:text-lg leading-relaxed whitespace-pre-line">
+              {currentActivity.content}
+            </p>
+          </div>
+        </article>
+
+        <!-- Povratak na aktivnosti -->
+        <div class="flex justify-start">
+          <a
+            href="/activities"
+            class="inline-flex items-center gap-2 text-sm font-bold text-indigo-600 hover:text-indigo-700 transition-colors"
           >
-            <svg class="w-4 h-4 transform group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
-            Nazad na sve aktivnosti
+            Nazad na aktivnosti i vesti
           </a>
         </div>
+
       </div>
-
     </div>
-  </article>
-
+  </section>
 </MainLayout>

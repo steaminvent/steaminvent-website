@@ -1,7 +1,7 @@
 ---
 // src/pages/courses/[slug].astro
 import MainLayout from '../../layouts/MainLayout.astro';
-import Accordion from '../../components/Accordion.astro'; // Uvozimo čistu komponentu
+import Accordion from '../../components/Accordion.astro';
 import { courses } from '../../data/courses';
 import { courseCurriculums } from '../../data/courseModules';
 
@@ -18,13 +18,29 @@ const { slug } = Astro.params;
 const currentSlug = (slug || '').trim().toLowerCase();
 const curriculum = courseCurriculums.find(c => c.courseId.trim().toLowerCase() === currentSlug);
 const currentModules = curriculum && curriculum.modules ? curriculum.modules : [];
+
+const courseUrl = `https://steaminvent.org/courses/${currentSlug}/`;
+
+const courseStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": course.title,
+  "description": course.seoDescription ?? course.description,
+  "url": courseUrl,
+  "provider": {
+    "@type": "Organization",
+    "name": "STEAM INVENT",
+    "sameAs": "https://steaminvent.org/"
+  }
+};
 ---
 
 <MainLayout 
   title={`${course.title} | STEAM INVENT`} 
   description={course.seoDescription ?? course.subtitle}
 >
-  
+  <script type="application/ld+json" set:html={JSON.stringify(courseStructuredData)} />
+
   <!-- ZAGLAVLJE KURSA (HERO SEKCIJA) -->
   <section class="relative py-16 lg:py-24 bg-slate-900 text-white overflow-hidden">
     <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#312e81_1px,transparent_1px)] [background-size:16px_16px]"></div>

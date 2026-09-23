@@ -4,6 +4,7 @@ export interface Course {
   slug: string;
   title: string;
   subtitle: string;
+  seoDescription?: string;
   description: string;
   difficulty: string;     
   duration: string;       
@@ -18,6 +19,7 @@ export const courses: Course[] = [
     slug: "razvoj-logike-kroz-scratch",
     title: "Razvoj Logike kroz Scratch za Najmlađe",
     subtitle: "Kreiranje igara i animacija kroz algoritamski kod",
+    seoDescription: "Scratch kurs za najmlađe razvija logičko i algoritamsko razmišljanje kroz promenljive, uslove i petlje, uz izradu sopstvenih priča, animacija i video igara.",
     description: "Učimo koncepte programiranja bez kucanja koda. Slažući šarene blokove koda, polaznici savladavaju osnovne koncepte programiranja kao što su promenljive, uslovi i petlje. Razvijaju logičko razmišljanje dizajnirajući sopstvene priče, animacije i video igre.",
     difficulty: "Početni nivo",
     duration: "3 meseca (24 časa)",
@@ -30,6 +32,7 @@ export const courses: Course[] = [
     slug: "steam-igracke-i-robotika",
     title: "STEAM Igračke & Robotika za Najmlađe",
     subtitle: "Razvoj tehničkih veština kroz STEM igračke i robote za najmlađe",
+    seoDescription: "STEAM kurs za najmlađe uvodi decu u mehaniku, električna kola i robotiku kroz sklapanje igračaka, rad sa motorima i senzorima i blokovsko programiranje.",
     description: "Program je osmišljen kao praktičan uvod u svet inženjerstva, elektronike i robotike za decu. U prvom delu kursa fokus je na mehanici, električnim kolima i solarnoj energiji, gde deca od drvenih i plastičnih delova samostalno sklapaju funkcionalne igračke koje zadržavaju. "
                 + "U drugom delu kursa prelaze na naprednije edukativne robote sa motorima i senzorima, gde uče osnove logike i blokovskog programiranja kako bi oživeli svoje konstrukcije.",
     difficulty: "Početni nivo",
@@ -43,6 +46,7 @@ export const courses: Course[] = [
     slug: "arduino-robotika-smart-home",
     title: "Arduino Robotika & Smart Home",
     subtitle: "Programiranje mikrokontrolera",
+    seoDescription: "Arduino Robotika & Smart Home kurs obuhvata programiranje mikrokontrolera, senzore i aktuatore kroz izradu autonomnog vozila i modela pametne kuće.",
     description: "Program je osmišljen kao srednji nivo edukacije iz primenjene elektronike, mikrokontrolera i robotike za decu. " 
                 + "Fokus je na premeštanju sa bazičnog Scratch/Blockly okruženja na naprednije blokovsko programiranje prilagođeno Arduino mikrokontrolerima (mBlock / PictoBlox / Arduino IDE sa blokovima), uz prelazak na izradu realnih praktičnih projekata: autonomnih pametnih vozila (Arduino autić) i modela pametnih kuća (Smart Home).",
     difficulty: "Srednji nivo",
@@ -56,6 +60,7 @@ export const courses: Course[] = [
     slug: "python-pocetni-nivo",
     title: "Python: Početni nivo",
     subtitle: "Od prvih linija koda do samostalnih konzolnih aplikacija",
+    seoDescription: "Python kurs za početnike obuhvata osnove programiranja i algoritamsko razmišljanje kroz praktične zadatke i izradu samostalnih konzolnih aplikacija.",
     description: "Python je jedan od najmoćnijih i najpopularnijih programskih jezika, a ovaj kurs je namenjen polaznicima koji žele da naprave prvi ozbiljan korak u svetu programiranja. "
                 + "Kroz pažljivo osmišljene lekcije i veliki broj praktičnih zadataka, učenici postepeno uče kako da razmišljaju kao programeri, rešavaju probleme i svoje ideje pretvore u funkcionalan program. Ovaj kurs predstavlja čvrstu osnovu za nastavak učenja programiranja i prirodan uvod u naš Python srednji nivo, na kojem se detaljnije obrađuju objektno-orijentisano programiranje i napredniji koncepti.",
     difficulty: "Početni nivo",
@@ -69,6 +74,7 @@ export const courses: Course[] = [
     slug: "python-srednji-nivo",
     title: "Python: Srednji nivo",
     subtitle: "Od objektno-orijentisanog programiranja do izrade složenijih aplikacija", 
+    seoDescription: "Python kurs srednjeg nivoa obuhvata OOP, klase, nasleđivanje, polimorfizam, rad sa fajlovima i JSON podacima kroz praktične projekte.",
     description: "Nakon savladavanja Python osnova, polaznici na ovom kursu prelaze na viši nivo programiranja i uče kako da svoje programe organizuju kao složene, pregledne i funkcionalne sisteme. "
               + "Glavni fokus kursa je objektno-orijentisano programiranje kroz koje učenici upoznaju klase, objekte, atribute, metode, enkapsulaciju, nasleđivanje, polimorfizam i kompoziciju. "
               + "Kroz praktične projekte uče kako više klasa može da sarađuje u jednoj aplikaciji, kako da program učine otpornijim na greške, sačuvaju podatke i organizuju kod kroz više modula. "
@@ -84,6 +90,7 @@ export const courses: Course[] = [
     slug: "python-web-development-api",
     title: "Python: Web Development & API",
     subtitle: "Od Python programa do funkcionalnih web aplikacija i REST API servisa",
+    seoDescription: "Python Web Development kurs obuhvata Flask, HTML, CSS, baze podataka i REST API kroz razvoj kompletnih web aplikacija i serverskih rešenja.",
     description: "Nakon savladavanja Python početnog i srednjeg nivoa, polaznici na ovom kursu prelaze sa izrade samostalnih programa na razvoj aplikacija koje funkcionišu kroz web. "
       + "Uče kako funkcioniše komunikacija između korisnika, web pregledača i serverske aplikacije, kako Python može da obrađuje web zahteve i kako se pomoću Flask frameworka grade funkcionalne web aplikacije. "
       + "Kroz praktičan rad upoznaju HTML i CSS u kontekstu serverski generisanih stranica, obradu formi, validaciju podataka, rad sa sesijama i povezivanje aplikacije sa bazom podataka. "
@@ -101,6 +108,7 @@ export const courses: Course[] = [
     slug: "ai-machine-learning",
     title: "AI & Machine Learning",
     subtitle: "Machine Learning, Deep Learning i razvoj praktičnih AI rešenja",
+    seoDescription: "AI & Machine Learning kurs obuhvata rad sa podacima, regresiju, klasifikaciju, clustering, anomaly detection i osnove Deep Learning-a.",
     description: "Ovaj kurs predstavlja oblasti posvećene veštačkoj inteligenciji, Machine Learning-u i osnovama Deep Learning-a. Namenjen je polaznicima koji već poseduju dobro predznanje programiranja u Pythonu i žele da nauče kako se od realnog problema, preko podataka i Machine Learning modela, dolazi do funkcionalnog AI rešenja. "
       + "Polaznici upoznaju osnovne principe veštačke inteligencije, razliku između AI, Machine Learning-a i Deep Learning-a, kao i kompletan tok razvoja ML rešenja: definisanje problema, rad sa podacima, priprema i analiza podataka, izbor modela, treniranje, evaluacija, unapređivanje modela i korišćenje modela za nove predikcije. "
       + "Kroz praktičan rad sa Pythonom, NumPy, Pandas i Matplotlib bibliotekama polaznici uče kako da pripreme, analiziraju i vizuelizuju podatke, dok kroz scikit-learn razvijaju regresione i klasifikacione modele, primenjuju clustering i anomaly detection i uče kako se modeli pravilno evaluiraju, porede i optimizuju. "
@@ -119,6 +127,7 @@ export const courses: Course[] = [
     slug: "csharp-pocetni-nivo", 
     title: "C#: Početni nivo", 
     subtitle: "Od prvih linija koda do samostalnih konzolnih aplikacija", 
+    seoDescription: "C# kurs za početnike obuhvata osnove jezika, algoritamsko razmišljanje, grananje, petlje, nizove i metode kroz praktične zadatke i razvoj konzolnih aplikacija.",
     description: "C# je jedan od najvažnijih savremenih programskih jezika i predstavlja odličnu osnovu za razvoj softvera, aplikacija i naprednih programerskih sistema. " 
               + "Ovaj kurs je namenjen polaznicima koji žele da naprave prvi ozbiljan korak u programiranju i kroz praktičan rad upoznaju osnove C# jezika. " 
               + "Kroz pažljivo osmišljene lekcije i veliki broj praktičnih zadataka, polaznici uče kako funkcionišu promenljive, tipovi podataka, operatori, grananje, petlje, nizovi i metode, ali i kako da analiziraju problem, osmisle algoritam i svoje rešenje pretvore u funkcionalan program. " 
@@ -135,6 +144,7 @@ export const courses: Course[] = [
     slug: "csharp-srednji-nivo",
     title: "C#: Srednji nivo",
     subtitle: "Od osnovnog C# programiranja do ozbiljnog objektno-orijentisanog razvoja",
+    seoDescription: "C# kurs srednjeg nivoa obuhvata OOP, nasleđivanje, polimorfizam, interfejse, generičke tipove, kolekcije, delegate i LINQ kroz praktične projekte.",
     description: "Ovaj kurs predstavlja prirodan nastavak našeg C# kursa za početni nivo i namenjen je polaznicima koji žele da svoje osnovno znanje C# programiranja podignu na viši nivo. "
       + "Kroz sistematsko upoznavanje sa objektno-orijentisanim programiranjem, polaznici uče kako da programski kod organizuju kroz klase i objekte i kako da grade pregledne, modularne i ponovo upotrebljive softverske komponente. "
       + "Kurs detaljno obrađuje svojstva, konstruktore, modifikatore pristupa, enkapsulaciju, apstrakciju, nasleđivanje, polimorfizam i interfejse, uz posebno razumevanje razlike između overloading i overriding mehanizama. "
@@ -152,6 +162,7 @@ export const courses: Course[] = [
     slug: "csharp-napredni-nivo",
     title: "C#: Desktop App Development - Full Stack",
     subtitle: "WPF, MVVM i razvoj profesionalnih .NET desktop aplikacija",
+    seoDescription: "C# kurs za razvoj desktop aplikacija obuhvata .NET 10, WPF, XAML i MVVM, uz Entity Framework Core i SQL Server kroz izradu kompletne poslovne aplikacije.",
     description:
       "Ovaj kurs predstavlja nastavak našeg C# kursa za srednji nivo i namenjen je polaznicima koji žele da svoje znanje programiranja podignu na nivo razvoja kompletnih i struktuisanih desktop aplikacija. "
       + "Kroz praktičan rad sa .NET 10, WPF i XAML tehnologijama polaznici uče kako da grade moderne Windows desktop aplikacije i kako da korisnički interfejs odvoje od poslovne logike i pristupa podacima. "
@@ -172,6 +183,7 @@ export const courses: Course[] = [
     slug: "c-pocetni-nivo",
     title: "C: Početni nivo",
     subtitle: "Od prvih algoritama do samostalnog pisanja C programa",
+    seoDescription: "C kurs za početnike obuhvata osnove programiranja, tipove podataka, grananje, petlje i funkcije, uz razvoj algoritamskog razmišljanja kroz praktične zadatke.",
     description: "Programski jezik C predstavlja jednu od najvažnijih osnova programiranja i omogućava polaznicima da na sistematičan način upoznaju kako se grade programi, kako računar obrađuje podatke i kako se rešavaju problemski zadaci kroz algoritme i programski kod. "
       + "Ovaj kurs je namenjen polaznicima koji žele da naprave prvi ozbiljan korak u programiranju i kroz praktičan rad upoznaju osnove programskog jezika C u Code::Blocks razvojnom okruženju. "
       + "Kroz pažljivo osmišljene lekcije polaznici uče kako se definiše struktura C programa, šta predstavljaju identifikatori i službene reči, kako funkcionišu različiti tipovi podataka i kako se podaci unose i prikazuju u programu. "
@@ -190,6 +202,7 @@ export const courses: Course[] = [
     slug: "c-napredni-nivo",
     title: "C: Napredni nivo",
     subtitle: "Od rada sa nizovima do razumevanja memorije i složenih podataka",
+    seoDescription: "C kurs za napredne nivoe obuhvata nizove, matrice, algoritme pretrage i sortiranja, pokazivače, dinamičku memoriju, stringove, datoteke i strukture.",
     description: "C programski jezik omogućava programerima da razumeju rad sa podacima, memorijom i programskim strukturama na znatno dubljem nivou nego većina savremenih jezika visokog nivoa. "
       + "Ovaj kurs je namenjen polaznicima koji su savladali osnove programskog jezika C i žele da svoje znanje podignu na viši nivo kroz rad sa složenijim strukturama podataka i važnim konceptima koji predstavljaju temelj ozbiljnog C programiranja. "
       + "Kurs počinje radom sa jednodimenzionalnim i dvodimenzionalnim nizovima, kroz koje polaznici uče kako da organizuju, pretražuju i obrađuju veći broj podataka. Poseban akcenat stavljen je na implementaciju osnovnih algoritama pretraživanja i sortiranja, kao i na praktičnu obradu vektora i matrica. "
@@ -208,6 +221,7 @@ export const courses: Course[] = [
     slug: "sql-pocetni-nivo",
     title: "SQL: Početni nivo",
     subtitle: "Od prvih tabela do samostalnog rada sa relacionim bazama podataka",
+    seoDescription: "SQL kurs za početnike obuhvata relacione baze, kreiranje i povezivanje tabela, SQL upite, pretragu i filtriranje podataka u Microsoft SQL Server okruženju.",
     description: "SQL je standardni jezik za rad sa relacionim bazama podataka i predstavlja jednu od najvažnijih veština u savremenom programiranju i obradi podataka. "
                 + "Ovaj kurs je namenjen polaznicima koji žele da nauče kako se podaci organizuju u bazama, kako se kreiraju i povezuju tabele i kako se pomoću SQL upita podaci pretražuju, filtriraju, obrađuju i analiziraju. "
                 + "Kroz veliki broj praktičnih primera i zadataka, polaznici rade u Microsoft SQL Server okruženju i postepeno prelaze od osnovnih SQL naredbi do složenijih upita koji povezuju više tabela. "
@@ -223,6 +237,7 @@ export const courses: Course[] = [
     slug: "3d-stampa-pocetni-nivo",
     title: "3D Štampa",
     subtitle: "3D modelovanje, dizajn i 3D štampa",
+    seoDescription: "3D Štampa kurs za početnike obuhvata 3D modelovanje u Tinkercadu, digitalni dizajn, pripremu modela, Slicer i praktičan rad sa Creality Ender 3D štampačem.",
     description: "Program je osmišljen kao praktičan uvod u svet 3D modelovanja, digitalnog dizajna i 3D štampanja za početnike. "
                 + "U prvom delu kursa fokus je na osnovama 3D prostora, kreiranju i spajanju geometrijskih tela u online alatu Tinkercad, gde polaznici uče kako da ideju sa papira pretvore u trodimenzionalni digitalni model. "
                 + "U drugom delu kursa prelaze na rad sa 3D štampačem Creality Ender i softverom za pripremu štampe (Slicer), gde savladavaju podešavanje parametara, pripremu modela i sam proces izrade fizičkih predmeta koje samostalno dizajniraju i zadržavaju.",
@@ -237,6 +252,7 @@ export const courses: Course[] = [
     slug: "qa-testiranje-softvera",
     title: "QA Testiranje Softvera",
     subtitle: "Kontrola kvaliteta i metodologije pronalaženja grešaka",
+    seoDescription: "QA kurs obuhvata manual testing, pisanje test slučajeva, pronalaženje i prijavljivanje bagova i kontrolu kvaliteta softvera pre puštanja aplikacije u rad.",
     description: "Uđite u svet QA inženjeringa. Naučite kako da detaljno analizirate softver, pišete test slučajeve (Test Cases), otkrivate bagove i osigurate da aplikacija radi savršeno pre puštanja u rad.",
     difficulty: "Srednji nivo",
     duration: "3 meseca (24 časa)",

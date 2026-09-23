@@ -22,7 +22,7 @@ const currentModules = curriculum && curriculum.modules ? curriculum.modules : [
 
 <MainLayout 
   title={`${course.title} | STEAM INVENT`} 
-  description={course.subtitle}
+  description={course.seoDescription ?? course.subtitle}
 >
   
   <!-- ZAGLAVLJE KURSA (HERO SEKCIJA) -->

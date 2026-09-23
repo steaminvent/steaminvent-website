@@ -30,7 +30,7 @@ const badgeClass = categoryColors[activity.category] || 'bg-slate-700 text-white
 ---
 
 <MainLayout 
-  title={`${activity.title} | STEAM INVENT`} 
+  title={activity.seoTitle ?? `${activity.title} | STEAM INVENT`} 
   description={activity.excerpt}
 >
   

@@ -1,6 +1,7 @@
 export interface Activity {
   id: string;
   title: string;
+  seoTitle?: string;
   excerpt: string;
   content: string;
   date: string;       // Format: YYYY-MM-DD zbog lakšeg sortiranja
@@ -14,6 +15,7 @@ export const activities: Activity[] = [
   {
     id: 'prijem-novih-clanova-jesen',
     title: 'Otvorene prijave za prijem novih članova i jesenji ciklus radionica',
+    seoTitle: 'Prijem novih članova i jesenje radionice | STEAM INVENT',
     excerpt: 'STEAM INVENT zvanično poziva sve zainteresovane da se priključe udruženju i obezbede mesto u novom ciklusu praktičnih radionica koje startuju u oktobru mesecu. ',
     content: 'Sa ponosom najavljujemo otvaranje prijava za novi ciklus radionica! Zbog rada u malim mentorskim grupama i rada na namenskoj opremi, broj mesta po grupama je ograničen. Sve naše radionice i detalje programa možete pronaći na stranici Programi našeg sajta kao i na zvaničnim stranicma društvenih mreža. Ili nas kontaktirati putem telefona i email-a. Ili jednostavno prošetati do našeg sedišta na adresi Kralja Petra I 5/12 u Sremskoj Mitrovici.',
     date: '2026-09-17',

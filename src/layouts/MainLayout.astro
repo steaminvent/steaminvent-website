@@ -6,11 +6,13 @@ import Footer from "../components/Footer.astro";
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
 
 const {
   title = "STEAM INVENT - Nauka, Tehnologija, Inženjerstvo, Umetnost i Matematika",
   description = "Udruženje građana iz Sremske Mitrovice posvećeno razvoju digitalnih veština, robotike i hardverske automatizacije kod dece i mladih.",
+  noindex = false,
 } = Astro.props;
 
 // Čitamo trenutnu putanju stranice
@@ -48,6 +50,7 @@ const socialImage = "https://steaminvent.org/images/hero-background.png";
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     <!-- CANONICAL -->
     <link rel="canonical" href={canonicalURL} />

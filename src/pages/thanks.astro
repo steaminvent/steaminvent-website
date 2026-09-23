@@ -1,11 +1,13 @@
 ---
 // src/pages/thanks.astro
 import MainLayout from '../layouts/MainLayout.astro';
+const noindex = true;
 ---
 
 <MainLayout 
   title="Poruka uspešno poslata | STEAM INVENT" 
   description="Hvala Vam što ste kontaktirali udruženje građana STEAM INVENT. Vaša poruka je uspešno primljena."
+  noindex={noindex}
 >
   
   <section class="min-h-[70vh] flex items-center justify-center bg-gradient-to-b from-indigo-50/30 to-white py-20">

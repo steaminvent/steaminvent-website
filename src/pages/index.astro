@@ -80,16 +80,23 @@ const offerItems = [
   <!-- DESKTOP -->
   <div class="relative hidden xl:block">
 
-    <img
-      src="/images/hero-background.webp"
-      alt=""
-      aria-hidden="true"
-      width="1956"
-      height="804"
-      fetchpriority="high"
-      decoding="async"
-      class="block h-auto w-full"
-    />
+    <picture>
+      <source
+        media="(min-width: 1280px)"
+        srcset="/images/hero-background.webp"
+        type="image/webp"
+      />
+      <img
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+        alt=""
+        aria-hidden="true"
+        width="1956"
+        height="804"
+        fetchpriority="high"
+        decoding="async"
+        class="block h-auto w-full"
+      />
+    </picture>
 
     <div
       class="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#001a33]/75 via-[#001a33]/30 to-transparent"
